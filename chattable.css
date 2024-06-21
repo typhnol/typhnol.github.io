@@ -1,0 +1,54 @@
+@font-face {
+  font-family:RWFont;
+  src:url(https://file.garden/Zlk30agh4hF11eOU/rain-world-menu.woff2);
+}
+
+#background {
+	background-color:black;
+}
+#top_banner {
+	display:none;
+}
+#input {
+	color:whitesmoke;
+	background-color:black;
+	border-radius:0;
+}
+#input:empty::before {
+	color:whitesmoke;
+	font-family:RWFont;
+}
+a {
+	color:red;
+}
+.msgBody {
+	color:whitesmoke;
+}
+.senderInfo {
+	color:red;
+}
+.allMessages {
+	border:3px solid whitesmoke;
+	border-radius:10px;
+	margin:10px 0px;
+	font-family:RWFont;
+}
+#timestamp {
+	color:whitesmoke;
+	font-family:RWFont;
+}
+#settings {
+	background-color:whitesmoke;
+	border-radius:10px;
+	padding:5px;
+}
+#settingsWindow {
+	background-color:grey;
+}
+#loadMore {
+	color:whitesmoke;
+}
+.owner {
+	margin-right:3px;
+	background-color:red;
+}
