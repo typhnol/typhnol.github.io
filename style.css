@@ -81,6 +81,7 @@ h1{
 	text-shadow:2px 2px darkred;
 }
 .navlink{
+	display:inline-block;
 	color:red;
 	text-decoration:none;
 	padding:10px 15px;
