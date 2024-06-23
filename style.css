@@ -266,4 +266,8 @@ a:hover{
 		grid-template-columns:auto;
 		grid-template-rows:auto auto;
 	}
+	#baba{
+		max-width:400px;
+		width:100%;
+	}
 }
