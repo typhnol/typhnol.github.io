@@ -6,6 +6,7 @@
 		<title>ABOUT</title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<meta name="darkreader-lock">
+		<script src="gettrack.js"></script>
 	</head>
 	<body>
 		<header>
@@ -23,38 +24,53 @@
 				<div id="aboutcontent">
 					<p class="default">i'm typhnol (he/him), typh shortened, an average internet lurker. generally i'll love any game that's fun and has a good story. i'll listen to anything that sounds good to my ears.</p>
 					<h2 style="margin:5px 0px">what am i listening to?</h2>
-					<!-- <a href="https://www.last.fm/user/typhnol"><img src="https://lastfm-recently-played.vercel.app/api?user=typhnol" height="auto" width="350px"/></a> -->
+					<div id="lasttrack">
+						<img src="" alt="album cover" id="albumcover" width=100px>
+						<a href="" id="songurl">
+							<div id="details">
+								<p id="songname"></p>
+								<p id="artist"></p>
+								<p id="playing" style="color:grey;"></p>
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
-			<h2>games</h2>
-			<ul>
-				<li><span>ULTRAKILL</span></li>
-				<li><span>Punishing: Gray Raven</span></li>
-				<li><span>Wuthering Waves</span></li>
-				<li><span>Hollow Knight</span></li>
-				<li><span>Rain World</span></li>
-				<li><span>OMORI</span></li>
-				<li><span>Undertale</span></li>
-				<li><span>Deltarune</span></li>
-				<li><span>Hyper Light Drifter</span></li>
-				<li><span>OneShot</span></li>
-				<li><span>Ori TBF and WotW</span></li>
-				<li><span>Baba Is You</span></li>
-				<li><span>Minecraft</span></li>
-				<li><span>Sky: Children of the Light<span></li>
-			</ul>
-			<h2>music</h2>
-			<ul>
-				<li><span>Heaven Pierce Her/Hakita/redherring.</span></li>
-				<li><span>Vanguard Sound</span></li>
-				<li><span>Toby Fox</span></li>
-				<li><span>inabakumori</span></li>
-				<li><span>AZALI</span></li>
-				<li><span>LAST WALTZ(album) by world's end girlfriend</span></li>
-				<li><span>THIRTY三十(album) by Oliver Buckland</span></li>
-				<li><span>... additionally, the soundtrack of anything else on the games list</span></li>
-			</ul>
-			<p class="default">by the way, i've been trying to make <a href="https://www.youtube.com/@typhnol" target="_blank">music</a> as well</p>
+			<div id="listcontainer">
+				<div>
+					<h2>games</h2>
+					<ul>
+						<li><span>ULTRAKILL</span></li>
+						<li><span>Punishing: Gray Raven</span></li>
+						<li><span>Wuthering Waves</span></li>
+						<li><span>Hollow Knight</span></li>
+						<li><span>Rain World</span></li>
+						<li><span>OMORI</span></li>
+						<li><span>Undertale</span></li>
+						<li><span>Deltarune</span></li>
+						<li><span>Hyper Light Drifter</span></li>
+						<li><span>OneShot</span></li>
+						<li><span>Ori TBF and WotW</span></li>
+						<li><span>Baba Is You</span></li>
+						<li><span>Minecraft</span></li>
+						<li><span>Sky: Children of the Light<span></li>
+					</ul>
+				</div>
+				<div>
+					<h2>music</h2>
+					<ul>
+						<li><span>Heaven Pierce Her/Hakita/redherring.</span></li>
+						<li><span>Vanguard Sound</span></li>
+						<li><span>Toby Fox</span></li>
+						<li><span>inabakumori</span></li>
+						<li><span>AZALI</span></li>
+						<li><span>LAST WALTZ(album) by world's end girlfriend</span></li>
+						<li><span>THIRTY三十(album) by Oliver Buckland</span></li>
+						<li><span>... additionally, the soundtrack of anything else on the games list</span></li>
+					</ul>
+					<p class="default">by the way, i've been trying to make <a href="https://www.youtube.com/@typhnol" target="_blank">music</a> as well</p>
+				</div>
+			</div>
 			<h2>blinkies</h2>
 			<div id="blinkies">
 				<img src="resources/loser.gif" alt="Another internet loser">
@@ -73,6 +89,7 @@
 			</div>
 			<h2>buttons</h2>
 			<div id="buttons">
+				<!-- <a href="" target="_blank"><img src="resources/" class="button" alt=""></a> -->
 				<a href="https://neocities.org" target="_blank"><img src="resources/neocities.gif" alt="Button to main Neocities page" class="button"></a>
 				<img src="resources/bestviewed.gif" alt="Best viewed on computer monitor" class="button">
 				<a href="https://corru.observer" target="_blank"><img src="resources/corru.gif" alt="Button to corru.observer, a webgame" class="button"></a>
@@ -83,11 +100,46 @@
 				<a href="https://fauux.neocities.org" target="_blank"><img src="resources/fauux.gif" alt="Button to fauux Neocities page" class="button"></a>
 				<a href="https://phrogee.neocities.org" target="_blank"><img src="resources/phrogee.gif" class="button" alt="Button to Phrogee's Neocities page"></a>
 				<a href="https://kromercoin.neocities.org" target="_blank"><img src="resources/kromer.gif" class="button" alt="Button to Typhra's Neocities page"></a>
+				<a href="https://feelingmachine.moe/" target="_blank"><img src="resources/feelingmachine.gif" class="button" alt="Button to Nephro's Neocities page"></a>
 				<img src="resources/kriswherearewe.png" alt="Kris where the fuck are we" class="button">
 				<iframe src="//incr.easrng.net/badge?key=circuitdoom" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0" class="button"></iframe>
 			</div>
+			<h2>silly goobers</h2>
+			<div>
+				<img src="resources/ghostcling.png" id="ghost" alt="the knight clinging on the wall">
+				<img src="resources/baba.GIF" id="baba" alt="baba walking">
+				<img src="resources/ori.gif" id="ori" alt="ori balancing">
+				<br>
+				<img src="resources/spamton.GIF" id="spamton" alt="spamton dancing">
+				<br>
+				<img src="resources/mewo.gif" id="mewo" alt="mewo resting">
+				<img src="resources/scug.gif" id="scug" alt="slugcat standing">
+			</div>
 		</section>
 		<script>
+			var mewo = document.getElementById("mewo");
+			var spamton = document.getElementById("spamton");
+			var ori = document.getElementById("ori");
+			
+			var meow = new Audio("https://file.garden/Zlk30agh4hF11eOU/mewo.ogg");
+			var laugh = new Audio("https://file.garden/Zlk30agh4hF11eOU/spamton.ogg");
+			var yipee = new Audio("https://file.garden/Zlk30agh4hF11eOU/ori.ogg");
+			laugh.volume = 0.4;
+			yipee.volume = 0.5;
+			function mewoMeow(){
+				meow.currentTime = 0;
+				meow.play();
+			}
+			function spamtonLaugh(){
+				laugh.play();
+			}
+			function oriYipee(){
+				yipee.play();
+			}
+			
+			mewo.addEventListener("click", mewoMeow);
+			ori.addEventListener("click", oriYipee);
+			spamton.addEventListener("click", spamtonLaugh);
 			
 		</script>
 	</body>

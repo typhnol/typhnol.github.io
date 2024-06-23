@@ -109,10 +109,13 @@ section{
 	color:whitesmoke;
 }
 #minityphnol{
-	position:absolute;
-	top:356px;
-	left:185px;
+	position:relative;
+	object-fit:cover;
+	object-position:100% 75%;
+	left:10px;
+	margin:-10px;
 	width:100px;
+	height:70px;
 }
 #updates{
 	border:3px solid whitesmoke;
@@ -132,7 +135,7 @@ section{
 }
 #chattable{
 	width:100%;
-	height:400px;
+	height:390px;
 	border:none;
 }
 #counter{
@@ -141,7 +144,7 @@ section{
 .container{
 	display:grid;
 	grid-template-columns:1fr 4fr;
-	border:3px solid white;
+	border:3px solid whitesmoke;
 	border-radius:10px;
 }
 #typhnol{
@@ -156,10 +159,31 @@ section{
 #aboutcontent{
 	grid-column:2/3;
 	padding:10px;
-	
+}
+#lasttrack{
+	display:grid;
+	grid-template-columns:100px auto;
+	grid-template-rows: auto;
+}
+#albumcover{
+	grid-column:1/2;
+}
+#lasttrack p{
+	margin:5px 15px;
+}
+#details{
+	color:whitesmoke;
+	grid-column:2/3;
+}
+#songname{
+	font-size:25px;
+}
+#listcontainer{
+	display:grid;
+	grid-template-columns:1fr 1fr;
 }
 ul {
-  color:white;
+  color:whitesmoke;
   font-size:20px;
   margin:5px auto;
   list-style-image:url('resources/karma10icon.png');
@@ -168,6 +192,37 @@ li span{
 	display:inline-block;
 	vertical-align:middle;
 	margin-bottom:8px;
+}
+.artimg{
+	display:inline-block;
+	vertical-align:top;
+	margin:8px 5px;
+	width:300px;
+}
+#ghost {
+  width: 120px;
+  margin-left: -60px;
+}
+#spamton {
+  width: 50px;
+  margin-left: 10%;
+  cursor: pointer;
+}
+#baba {
+  width: 400px;
+}
+#mewo {
+  width: 60px;
+  margin-left: 40%;
+  cursor: grab;
+}
+#scug {
+  margin-left: 30%;
+}
+#ori {
+  width: 80px;
+  margin-left: 10%;
+  cursor: pointer;
 }
 a{
 	color:red;
@@ -184,15 +239,31 @@ a:hover{
 	text-transform:lowercase;
 }
 
-@media screen and (max-width: 834.5px){
-	#minityphnol{
-		top:377px;
-		left:180px;
+@media screen and (max-width: 727px){
+	.container{
+		grid-template-columns:auto;
+		grid-template-rows: auto auto;
+	}
+	#typhnol{
+		width:250px;
+		height:250px;
+		margin:auto;
+		object-fit:contain;
+		grid-column:1/2;
+		grid-row:1/2;
+	}
+	#aboutcontent{
+		grid-column:1/2;
+		grid-row:2/3;
+		text-align:center;
+	}
+	#lasttrack{
+		justify-content:center;
 	}
 }
-@media screen and (max-width: 637px){
-	#minityphnol{
-		top:398px;
-		left:180px;
+@media screen and (max-width: 620px){
+	#listcontainer{
+		grid-template-columns:auto;
+		grid-template-rows:auto auto;
 	}
 }
