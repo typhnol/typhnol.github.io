@@ -2,7 +2,7 @@ fetchData();
 
 async function fetchData(){
 	try{
-		const response = await fetch("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=typhnol&api_key=72e55a57a4fe9a4aab96027bbb021884&limit=1&format=json");
+		const response = await fetch("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=typhnol&api_key=72e55a57a4fe9a4aab96027bbb021884&limit=1&format=json");
 		
 		const data = await response.json();
 		const name = data.recenttracks.track[0].name;
