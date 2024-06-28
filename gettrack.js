@@ -28,8 +28,6 @@ async function fetchData(){
 			statusP.innerText = "Played some time ago";
 			statusP.style.color = "grey";
 		}
-		
-		console.log(data);
 	}
 	catch{
 		console.error("whoops");
