@@ -118,6 +118,24 @@ section{
 	width:100px;
 	height:70px;
 }
+#minioce{
+	position:relative;
+	object-fit:cover;
+	object-position:100% 75%;
+	left:-30px;
+	margin:-10px;
+	width:100px;
+	height:70px;
+}
+#miniwyn{
+	position:relative;
+	object-fit:cover;
+	object-position:100% 75%;
+	left:-10px;
+	margin:-10px;
+	width:100px;
+	height:70px;
+}
 #updates{
 	border:3px solid whitesmoke;
 	padding:20px;
