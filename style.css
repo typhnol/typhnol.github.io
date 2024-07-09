@@ -7,20 +7,20 @@
 	src:url(https://file.garden/Zlk30agh4hF11eOU/VCR_OSD_MONO.woff2);
 }
 * {
-	scrollbar-color: white black;
+	scrollbar-color:white black;
 }
 *::-webkit-scrollbar-thumb {
-	background-color: white;
+	background-color:white;
 }
 *::-webkit-scrollbar-track {
-	background-color: black;
+	background-color:black;
 }
 
 body{
-	background-size: cover;
+	background-size:cover;
 	background-color:black;
 	margin: 10px 2%;
-	color:red;
+	color:#27AB8E;
 	font-family:RWFont;
 	overflow-x:hidden;
 	overflow-y:scroll;
@@ -78,21 +78,21 @@ h1{
 	font-size:45px;
 	font-family:VCR_OSD;
 	margin:20px 10px;
-	text-shadow:2px 2px darkred;
+	text-shadow:2px 2px #1A7461;
 }
 .navlink{
 	display:inline-block;
-	color:red;
+	color:#27AB8E;
 	text-decoration:none;
 	padding:10px 15px;
-	text-shadow:2px 2px darkred;
+	text-shadow:2px 2px #1A7461;
 }
 .navlink:hover{
-	background-color:red;
+	background-color:#27AB8E;
 	color:whitesmoke;
 }
 h2{
-	text-shadow:2px 2px darkred;
+	text-shadow:2px 2px #1A7461;
 }
 section{
 	margin:15px;
@@ -100,7 +100,8 @@ section{
 #statuscafe {
     padding:20px;
     background-color:black;
-    border: 3px solid whitesmoke;
+    border:3px solid whitesmoke;
+	border-radius:10px;
 }
 #statuscafe-username {
     margin-bottom:10px;
@@ -141,6 +142,7 @@ section{
 	padding:20px;
 	height:100px;
 	overflow-y:scroll;
+	border-radius:10px;
 }
 .dateEntry{
 	color:whitesmoke;
@@ -244,11 +246,11 @@ li span{
   cursor: pointer;
 }
 a{
-	color:red;
+	color:#27AB8E;
 	text-decoration:none;
 }
 a:hover{
-	color:darkred;
+	color:#1A7461;
 }
 .upper{
 	text-transform:uppercase;

@@ -3,6 +3,16 @@
   src:url(https://file.garden/Zlk30agh4hF11eOU/rain-world-menu.woff2);
 }
 
+* {
+	scrollbar-color:white black;
+}
+*::-webkit-scrollbar-thumb {
+	background-color:white;
+}
+*::-webkit-scrollbar-track {
+	background-color:black;
+}
+
 #background {
 	background-color:black;
 }
@@ -19,13 +29,13 @@
 	font-family:RWFont;
 }
 a {
-	color:red;
+	color:#1A7461;
 }
 .msgBody {
 	color:whitesmoke;
 }
 .senderInfo {
-	color:red;
+	color:#1A7461;
 }
 .allMessages {
 	border:3px solid whitesmoke;
@@ -33,13 +43,17 @@ a {
 	margin:10px 0px;
 	font-family:RWFont;
 }
+.highlight{
+	color:#1A7461;
+	background-color:whitesmoke;
+}
 #timestamp {
 	color:whitesmoke;
 	font-family:RWFont;
 }
 #settings {
-	background-color:whitesmoke;
-	border-radius:10px;
+	background-color:#1A7461;
+	border-radius:5px;
 	padding:5px;
 }
 #settingsWindow {
@@ -50,5 +64,5 @@ a {
 }
 .owner {
 	margin-right:3px;
-	background-color:red;
+	background-color:#1A7461;
 }
