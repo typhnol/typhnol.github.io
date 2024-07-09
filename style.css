@@ -20,7 +20,7 @@ body{
 	background-size:cover;
 	background-color:black;
 	margin: 10px 2%;
-	color:#27AB8E;
+	color:#ff3c41;
 	font-family:RWFont;
 	overflow-x:hidden;
 	overflow-y:scroll;
@@ -78,21 +78,21 @@ h1{
 	font-size:45px;
 	font-family:VCR_OSD;
 	margin:20px 10px;
-	text-shadow:2px 2px #1A7461;
+	text-shadow:2px 2px #7d1d2c;
 }
 .navlink{
 	display:inline-block;
-	color:#27AB8E;
+	color:#ff3c41;
 	text-decoration:none;
 	padding:10px 15px;
-	text-shadow:2px 2px #1A7461;
+	text-shadow:2px 2px #7d1d2c;
 }
 .navlink:hover{
-	background-color:#27AB8E;
+	background-color:#ff3c41;
 	color:whitesmoke;
 }
 h2{
-	text-shadow:2px 2px #1A7461;
+	text-shadow:2px 2px #7d1d2c;
 }
 section{
 	margin:15px;
@@ -246,11 +246,11 @@ li span{
   cursor: pointer;
 }
 a{
-	color:#27AB8E;
+	color:#ff3c41;
 	text-decoration:none;
 }
 a:hover{
-	color:#1A7461;
+	color:#7d1d2c;
 }
 .upper{
 	text-transform:uppercase;
