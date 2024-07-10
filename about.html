@@ -122,10 +122,12 @@
 			var mewo = document.getElementById("mewo");
 			var spamton = document.getElementById("spamton");
 			var ori = document.getElementById("ori");
+			var survivor = document.getElementById("scug");
 			
 			var meow = new Audio("https://file.garden/Zlk30agh4hF11eOU/mewo.ogg");
 			var laugh = new Audio("https://file.garden/Zlk30agh4hF11eOU/spamton.ogg");
 			var yipee = new Audio("https://file.garden/Zlk30agh4hF11eOU/ori.ogg");
+			var waaaa = new Audio("https://file.garden/Zlk30agh4hF11eOU/waaaa.WAV");
 			laugh.volume = 0.4;
 			yipee.volume = 0.5;
 			function mewoMeow(){
@@ -138,10 +140,14 @@
 			function oriYipee(){
 				yipee.play();
 			}
+			function survivorWaaaa(){
+				waaaa.play();
+			}
 			
 			mewo.addEventListener("click", mewoMeow);
 			ori.addEventListener("click", oriYipee);
 			spamton.addEventListener("click", spamtonLaugh);
+			survivor.addEventListener("click", survivorWaaaa);
 			
 		</script>
 	</body>

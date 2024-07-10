@@ -239,6 +239,7 @@ li span{
 }
 #scug {
   margin-left: 30%;
+  cursor:pointer;
 }
 #ori {
   width: 80px;
