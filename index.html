@@ -8,13 +8,22 @@
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 	</head>
-	<body>
-		<header>
-			<h1 class="upper">Salutations</h1>
-		</header>
-		<section>
-			<p class="default">web design is not my passion</p>
-			<a href="home.html">enter this loser's domain</a>
-		</section>
+	<body style="overflow:hidden;">
+		<div id="particles-js"></div>
+		<div id="splash">
+			<header>
+				<h1 class="upper">Good golly!!!</h1>
+			</header>
+			<section>
+				<p class="lower">Web design is not my passion</p>
+				<a href="home.html" class="lower">Enter</a>
+			</section>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script>
+			particlesJS.load('particles-js', 'particles.json', function() {
+				console.log('particles.js loaded');
+			});
+		</script>
 	</body>
 </html>
