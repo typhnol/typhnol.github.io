@@ -238,9 +238,9 @@ li span{
 #splash{
 	text-align:center;
 	position:absolute;
-	width:330px;
-	height:190px;
-	padding-top:10px;
+	width:340px;
+	height:240px;
+	padding:10px 20px 0px 20px;
 	top:0px;
 	bottom:0px;
 	left:0px;
@@ -249,6 +249,12 @@ li span{
 	background-color:#000000;
 	box-shadow:10px 10px #ffffff;
 	border:2px solid white;
+}
+.splashnote{
+	font-size:12px;
+}
+.splashnote span{
+	color:#ff1a3c;
 }
 #splash *{
 	margin:15px 0px;
