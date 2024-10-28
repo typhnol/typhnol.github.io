@@ -44,7 +44,6 @@ body{
 	color:white;
 	background-color:black;
 	font-family: "Kode Mono", monospace;
-	image-rendering: pixelated;
 }
 h1{
 	font-size: 35px;
