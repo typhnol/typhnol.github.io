@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@font-face{
+	font-family:VCR_OSD;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/VCR_OSD_MONO.woff2);
+}
+@font-face{
+	font-family:RWFont;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/rain-world-menu.woff2);
+}
+body {
+	font-family:"Kode Mono", monospace;
+}
+#top_banner {
+	display:none;
+}
+#background {
+	background-color:black;
+}
+.allMessages {
+	border-top:1px solid #222222;
+}
+.received {
+	
+}
+.sent {
+	
+}
+.msgBody {
+	color:white;
+}
+.senderInfo {
+	color:#ff1a3c;
+	font-family:RWFont;
+	font-size:15px;
+}
+#loadMore {
+	color:white;
+}
+#timestamp {
+	color:grey;
+}
+#settings {
+	background-image:none;
+	color:white;
+}
+#settings:after {
+  position:absolute;
+  right:0;
+  top:0;
+  content:"settings";
+  color:white;
+  font-size:11px;
+}
+#scrollToBottom {
+	/* Adjusts the hovering 'scroll to bottom' button */
+}
+.ctxMenuOption {
+	/* Adjusts the options for the menus when right clicking a message */
+}
+.owner::before {
+	content: "◉";
+	padding: 0px 3px 2px 0px;
+}
+.owner{
+	display: contents;
+}
+#settingsWindow {
+	background-color: black;
+}
+#settingsMenu{
+	color: white;
+}
+.pinned {
+	
+}
+.highlight{
+	background-color:#ff1a3c;
+}
+.emoji {
+	/* Selects emojis that are inside messages */
+}
+#emojiTray {
+	color:white;
+	background-color:black;
+}
+#emojiTrayToggle{
+	background-image:url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emoji.png);
+	margin-top: 1px;
+}
+#is_typing > span{
+	background-color:black;
+}
+#input {
+	border-radius:0;
+	background-color:black;
+	border-top:1px solid grey;
+	color: white;
+	font-family:"Kode Mono", monospace;
+}
+#input:empty::before{
+	color:grey;
+	font-family:"Kode Mono", monospace;
+}
+
+#save, #name {
+	font-family:"Kode Mono", monospace;
+}
+#name{
+	font-size: 12px;
+}
+a {
+	color:#ff1a3c;
+}
+#closeSettingsBtn{
+	background-color:#ff1a3c;
+}
+input[type="checkbox"] + label::after{
+	color:#ff1a3c;
+}

@@ -55,6 +55,13 @@ h2{
 	font-size:30px;
 	margin:5px 0px;
 }
+#chattable {
+	position: fixed;
+	bottom:0;
+	right:0;
+	height: 500px;
+	border: 1px solid grey;
+}
 .wholething{
 	text-align:center;
 	margin-top:20vh;
