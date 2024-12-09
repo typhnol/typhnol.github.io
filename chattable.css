@@ -19,12 +19,6 @@ body {
 .allMessages {
 	border-top:1px solid #222222;
 }
-.received {
-	
-}
-.sent {
-	
-}
 .msgBody {
 	color:white;
 }
@@ -51,12 +45,6 @@ body {
   color:white;
   font-size:11px;
 }
-#scrollToBottom {
-	/* Adjusts the hovering 'scroll to bottom' button */
-}
-.ctxMenuOption {
-	/* Adjusts the options for the menus when right clicking a message */
-}
 .owner::before {
 	content: "◉";
 	padding: 0px 3px 2px 0px;
@@ -70,14 +58,8 @@ body {
 #settingsMenu{
 	color: white;
 }
-.pinned {
-	
-}
 .highlight{
 	background-color:#ff1a3c;
-}
-.emoji {
-	/* Selects emojis that are inside messages */
 }
 #emojiTray {
 	color:white;
@@ -85,7 +67,7 @@ body {
 }
 #emojiTrayToggle{
 	background-image:url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emoji.png);
-	margin-top: 1px;
+	margin-top:1px;
 }
 #is_typing > span{
 	background-color:black;
@@ -101,7 +83,6 @@ body {
 	color:grey;
 	font-family:"Kode Mono", monospace;
 }
-
 #save, #name {
 	font-family:"Kode Mono", monospace;
 }
