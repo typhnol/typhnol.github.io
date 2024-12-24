@@ -15,6 +15,7 @@ body {
 }
 #background {
 	background-color:black;
+	height: calc(100% - 30px);
 }
 .allMessages {
 	border-top:1px solid #222222;
