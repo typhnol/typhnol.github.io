@@ -40,6 +40,8 @@
 						<div class="updates">
 						<!-- <p class="dateEntry">//<br>ABC</p>
 						<br> -->
+						<p class="dateEntry">1/23/25<br>Chattable is now toggle-able. Just click the banner.</p>
+						<br>
 						<p class="dateEntry">12/9/24<br>Chattable is no longer discontinued yipee yay! I added it back.</p>
 						<br>
 						<p class="dateEntry">8/30/24<br>Re-did the entire website layout again. Removed visitor count, it was a bit silly-looking.</p>
@@ -85,7 +87,10 @@
 					</div>
 				</div>
 			</section>
-			<iframe src='https://iframe.chat/embed?chat=79970941' id='chattable' frameborder='none'></iframe>
+			<div id="chat">
+				<div id="chatbanner" class="chatbanner"><p id=bannerlabel>Chat</p></div>
+				<iframe src='https://iframe.chat/embed?chat=79970941' id='chattable' class="chattable" frameborder='none'></iframe>
+			</div>
 			<footer>
 				<p class="footer">2025-typhnol</p>
 			</footer>
@@ -102,6 +107,23 @@
 				document.getElementById("motm").src = "motm/meme"+m+".jpg";
 			  }
 			}
+			
+			var chatBanner = document.getElementById("chatbanner");
+			var chatBox = document.getElementById("chattable");
+			var isHidden = false;
+			function toggleDisplay(){
+				if (isHidden==false){
+					chatBox.style.bottom = "-406px";
+					chatbanner.style.bottom = "-407px";
+					isHidden=true;
+				} else {
+					chatBox.style.bottom = "-5px";
+					chatbanner.style.bottom = "-6px";
+					isHidden=false;
+				}
+			}
+
+			chatBanner.addEventListener("click", toggleDisplay);
 		</script>
 	</body>
 </html>
