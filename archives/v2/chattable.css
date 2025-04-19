@@ -1,0 +1,54 @@
+@font-face {
+  font-family: VCR_OSD;
+  src: url(https://file.garden/Zlk30agh4hF11eOU/VCR_OSD_MONO.woff2);
+}
+
+#background {
+  background-color: black;
+}
+#top_banner {
+  display: none;
+}
+#input {
+  color: white;
+  background-color: #370000;
+  border-radius: 0;
+}
+#input:empty::before {
+  color: white;
+  font-family: VCR_OSD;
+}
+a {
+  color: red;
+}
+.msgBody {
+  color: white;
+}
+.senderInfo {
+  color: red;
+}
+.allMessages {
+  border-top: 2px solid #370000;
+  border-bottom: 2px solid #370000;
+  margin: 10px 0px;
+  font-family: VCR_OSD;
+}
+#timestamp {
+  color: white;
+  font-family: VCR_OSD;
+}
+#settings {
+  background-color: red;
+  border-radius: 5px;
+  padding: 5px;
+}
+#settingsWindow {
+  background-color: grey;
+}
+#loadMore {
+  color: white;
+}
+.owner {
+  margin-right: 3px;
+  background-color: red;
+}

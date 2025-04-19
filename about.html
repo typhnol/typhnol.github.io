@@ -9,17 +9,22 @@
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 		<script src="gettrack.js"></script>
 		<script src="sfx.js" defer></script>
+		<script>
+			function delay (URL) {
+				setTimeout( function() { window.location = URL }, 200 );
+			}
+		</script>
 	</head>
 	<body>
 		<div class="wholething">
 			<div class="titlenav">
 				<header>
-					<h1 class="upper">Typhnol</h1>
+					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
 				</header>
 				<nav>
-					<a href="home.html" class="navlink upper" id="homelink">Home</a>
-					<a href="about.html" class="navlink upper" id="aboutlink">About</a>
-					<a href="art.html" class="navlink upper" id="artlink">Art</a>
+					<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
 				</nav>
 			</div>
 			<section>
@@ -76,6 +81,7 @@
 							<li><span>Nastyona</span></li>
 							<li><span>inabakumori</span></li>
 							<li><span>AZALI</span></li>
+							<li><span>Touhou東方 Project/ZUN</span></li>
 							<li><span>LAST WALTZ(album) by world's end girlfriend</span></li>
 							<li><span>THIRTY三十(album) by Oliver Buckland</span></li>
 							<li><span>... additionally, the soundtrack of anything else on the games list</span></li>
@@ -106,14 +112,18 @@
 			var spamton = document.getElementById("spamton");
 			var ori = document.getElementById("ori");
 			var survivor = document.getElementById("scug");
+			var ghost = document.getElementById("ghost");
 			
-			var meow = new Audio("https://file.garden/Zlk30agh4hF11eOU/mewo.ogg");
-			var laugh = new Audio("https://file.garden/Zlk30agh4hF11eOU/spamton.ogg");
-			var yipee = new Audio("https://file.garden/Zlk30agh4hF11eOU/ori.ogg");
+			var meow = new Audio("https://file.garden/Zlk30agh4hF11eOU/mewo.wav");
+			var laugh = new Audio("https://file.garden/Zlk30agh4hF11eOU/spamton.wav");
+			var yipee = new Audio("https://file.garden/Zlk30agh4hF11eOU/ori.wav");
 			var waaaa = new Audio("https://file.garden/Zlk30agh4hF11eOU/waaaa.WAV");
+			var hit = new Audio("https://file.garden/Zlk30agh4hF11eOU/parry.wav");
+			
 			laugh.volume = 0.1;
 			yipee.volume = 0.1;
 			meow.volume = 0.2;
+			hit.volume = 0.4;
 			function mewoMeow(){
 				meow.currentTime = 0;
 				meow.play();
@@ -127,11 +137,15 @@
 			function survivorWaaaa(){
 				waaaa.play();
 			}
+			function ghostHit(){
+				hit.play();
+			}
 			
 			mewo.addEventListener("click", mewoMeow);
 			ori.addEventListener("click", oriYipee);
 			spamton.addEventListener("click", spamtonLaugh);
 			survivor.addEventListener("click", survivorWaaaa);
+			ghost.addEventListener("click", ghostHit);
 			
 		</script>
 	</body>
