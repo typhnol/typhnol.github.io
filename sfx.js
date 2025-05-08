@@ -10,6 +10,8 @@ console.log(link1);
 
 var menu = new Audio("https://file.garden/Zlk30agh4hF11eOU/generic%20menu%20selection.wav");
 var menuClick = new Audio("https://file.garden/Zlk30agh4hF11eOU/select.wav");
+menu.volume = 0.4;
+menuClick.volume = 0.4;
 
 function menuSelectSfx(){
 	menu.play();

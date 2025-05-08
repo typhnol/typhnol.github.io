@@ -319,10 +319,18 @@ li span{
 	background-color: black;
 }
 .artimg{
-	display:inline-block;
 	vertical-align:top;
-	margin:8px 5px;
 	width:300px;
+}
+.artcaption{
+	max-width: 600px;
+	padding: 10px;
+	margin: auto;
+}
+.artcontain{
+	width:300px;
+	margin:8px 5px;
+	display:inline-block;
 }
 .splashhead {
 	display: inline-block;
