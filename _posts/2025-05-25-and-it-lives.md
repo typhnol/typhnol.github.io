@@ -2,7 +2,7 @@
 layout: post
 title: "AND IT LIVES"
 date: 2025-05-25 22:19:40
-author: Your Name
+author: typhnol
 ---
 ok for real this time <br>
 hello this is my first blog post woohoo yeahh yipee 
