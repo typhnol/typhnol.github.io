@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AND IT LIVES"
-date: 2025-05-25
+date: 2025-05-25 22:17:40 -0400
 author: Your Name
 ---
 ok for real this time <br>
