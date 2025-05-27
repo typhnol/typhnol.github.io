@@ -358,6 +358,10 @@ li span{
 .blogpost {
 	padding: 0px 20px;
 }
+.blogpost  img {
+	max-width: 100%;
+	height: auto;
+}
 .splashhead {
 	display: inline-block;
 	margin: 15px 0px;
