@@ -3,8 +3,9 @@
 var link1 = document.getElementById("homelink");
 var link2 = document.getElementById("aboutlink");
 var link3 = document.getElementById("artlink");
-var link4 = document.getElementById("omolink");
-var link5 = document.getElementById("archivelink");
+var link4 = document.getElementById("bloglink");
+var link5 = document.getElementById("omolink");
+var link6 = document.getElementById("archivelink");
 
 console.log(link1);
 
@@ -27,16 +28,18 @@ link2.addEventListener("mouseover", menuSelectSfx);
 link2.addEventListener("click", menuClickSfx);
 link3.addEventListener("mouseover", menuSelectSfx);
 link3.addEventListener("click", menuClickSfx);
+link4.addEventListener("mouseover", menuSelectSfx);
+link4.addEventListener("click", menuClickSfx);
 
-if (link4) {
-	link4.addEventListener("mouseover", menuSelectSfx);
-	link4.addEventListener("click", menuClickSfx);
-} else {
-	
-}
 if (link5) {
 	link5.addEventListener("mouseover", menuSelectSfx);
 	link5.addEventListener("click", menuClickSfx);
+} else {
+	
+}
+if (link6) {
+	link6.addEventListener("mouseover", menuSelectSfx);
+	link6.addEventListener("click", menuClickSfx);
 } else {
 	
 }

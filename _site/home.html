@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TYPHNOL</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<meta name="darkreader-lock">
+		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+		<script src="sfx.js" defer></script>
+		<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+		<script>
+			chattable.initialize({
+				stylesheet : "chattable.css",
+			});
+			
+			function delay (URL) {
+				setTimeout( function() { window.location = URL }, 200 );
+			}
+		</script>
+	</head>
+	<body>
+		<!-- welcome to my land of shit code -->
+		<div class="wholething">
+			<div class="titlenav">
+				<header>
+					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
+				</header>
+				<nav>
+					<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
+					<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
+				</nav>
+			</div>
+			<section>
+				<div class="container">
+					<img src="resources/silly.gif" class="typhmain" alt="itsa me">
+					<div class="textmain">
+						<h2>what's up?</h2>
+						<p class="lower">I use this for archiving my art and stuff but if you want you can find some of my interests</p>
+					</div>
+				</div>
+				<div id="statuscafe"><div id="marquee"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div></div><script src="https://status.cafe/current-status.js?name=typhnol" defer></script>
+				<div class="updates-section">
+					<h2><img class="updatehead" src="resources/update.gif"></h2>
+					<div class="updates">
+					<!-- 
+					<p class="dateEntry">//<br>ABC</p>
+					<br> 
+					-->
+					<p class="dateEntry">5/7/25<br>added back some old captions in art. i'll come up with a better system later...maybe with more in depth commentary if anyone bothers to read it</p>
+					<br> 
+					<p class="dateEntry">4/18/25<br>oh boy another one...minor changes in design here and there. Got rid of stripes. Added a new section in #art where my old layouts are viewable.</p>
+					<br>
+					<p class="dateEntry">3/23/25<br>YEAH!!! Small website design changes.</p>
+					<br>
+					<p class="dateEntry">1/23/25<br>Chattable is now collapsible. Just click the banner.</p>
+					<br>
+					<p class="dateEntry">12/9/24<br>Chattable is no longer discontinued yipee yay! I added it back.</p>
+					<br>
+					<p class="dateEntry">8/30/24<br>Re-did the entire website layout again. Removed visitor count, it was a bit silly-looking.</p>
+					<br>
+					<p class="dateEntry">7/10/22<br>Removed Chattable (<s>it has been discontinued, and I don't plan on using a replacement</s>). Added chibis of me and my friends. Changed red saturation.</p>
+					<br>
+					<p class="dateEntry">6/22/24<br>Changed website design again. A lot simpler this time because i'm too lazy. The old one became hard on my eyes.</p>
+					<br>
+					<p class="dateEntry">6/2/24<br>Added background image.</p>
+					<br>
+					<p class="dateEntry">5/31/24<br>Added some music to homepage.</p>
+					<br>
+					<p class="dateEntry">5/30/24<br>New typhnol design for the something-th time. Small fixes to make the site look nicer.</p>
+					<br>
+					<p class="dateEntry">5/12/24<br>Added chat. Website now mobile compatible.</p>
+					<br>
+					<p class="dateEntry">5/9/24<br>Redesigned entire website. Not mobile compatible yet.</p>
+					<br>
+					<p class="dateEntry">4/29/24<br>No more typhnol on the front page. Miscellaneous updates to the rest of the pages.</p>
+					<br>
+					<p class="dateEntry">4/8/24<br>Modified homepage typhnol design.</p>
+					<br>
+					<p class="dateEntry">3/31/24<br>Art page completed. About page updated.</p>
+					<br>
+					<p class="dateEntry">2/26/24<br>Changed homepage typhnol design.</p>
+					<br>
+					<p class="dateEntry">1/26/24<br>Added mobile layout.</p>
+					<br>
+					<p class="dateEntry">1/19/24<br>About page completed? Added couple more stamps and buttons.</p>
+					<br>
+					<p class="dateEntry">1/15/24<br>Homepage completed.</p>
+					<br>
+					<p class="dateEntry">1/12/24<br>More styling. More content or something??</p>
+					<br>
+					<p class="dateEntry">1/8/24<br>Changed to correct year. Adding layout. Added nav to other pages.</p>
+					<br>
+					<p class="dateEntry">1/7/24<br>Website creation. Added homepage.</p>
+				</div>
+				</div>
+				<div class="motm-section">
+					<h2>hello</h2>
+					<img id="motm" alt="media of the month" src="motm/eee.jpg">
+				</div>
+			</section>
+			<div id="chat">
+				<div id="chatbanner" class="chatbanner"><p id="bannerlabel">Chat</p></div>
+				<iframe src='https://iframe.chat/embed?chat=79970941' id='chattable' class="chattable" frameborder='none'></iframe>
+			</div>
+			<footer>
+				<p class="footer">2025-typhnol</p>
+			</footer>
+		</div>
+		<script>
+			/* const d = new Date();
+			var month = d.getMonth() + 1;
+			var day = d.getDate();
+			var year = d.getFullYear(); 
+			for(let m = 0; m < 13; m++) {
+			  if(month == 2) {
+				document.getElementById("motm").src = "motm/meme2.gif";
+			  } else if(month == m){
+				document.getElementById("motm").src = "motm/meme"+m+".jpg";
+			  }
+			}
+			*/
+			
+			var chatBanner = document.getElementById("chatbanner");
+			var chatBox = document.getElementById("chattable");
+			var isHidden = localStorage.getItem("lastToggle") === "true";
+			if (isHidden) {
+				chatBox.style.bottom = "-406px";
+				chatBanner.style.bottom = "-407px";
+			} else {
+				chatBox.style.bottom = "-5px";
+				chatBanner.style.bottom = "-6px";
+			}
+			
+			function toggleDisplay(){
+				isHidden = !isHidden;
+				if (isHidden) {
+					chatBox.style.bottom = "-406px";
+					chatBanner.style.bottom = "-407px";
+				} else {
+					chatBox.style.bottom = "-5px";
+					chatBanner.style.bottom = "-6px";
+				}
+				
+				localStorage.setItem("lastToggle", isHidden.toString());
+			}
+			chatBanner.addEventListener("click", toggleDisplay); 
+		</script>
+	</body>
+</html>

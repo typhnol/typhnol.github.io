@@ -119,10 +119,15 @@ h2{
 }
 .title{
 	width: 250px;
+	image-rendering: pixelated;
 }
 .navlink {
 	font-family: RWFont;
 	font-size: 25px;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
 }
 .container{
 	display:flex;
@@ -133,6 +138,7 @@ h2{
 	background-color: rgba(0, 0, 0, 0.45);
 }
 .typhmain{
+	image-rendering: pixelated;
 	width:150px;
 	margin: 20px 0px;
 }
@@ -142,6 +148,7 @@ h2{
 }
 .updatehead {
 	width: 200px;
+	image-rendering: pixelated;
 }
 .updates{
 	padding:20px;
@@ -332,14 +339,35 @@ li span{
 	margin:8px 5px;
 	display:inline-block;
 }
+.bloglistcontainer {
+	min-width: 300px;
+	width: 60%;
+	margin: auto; 
+}
+.bloglist {
+	margin:auto;
+	padding: 15px 0px 10px 30px;
+	list-style-image:url('resources/karma10icon.png');
+	text-align:left;
+	border-top: solid 1px white;
+	border-bottom: solid 1px white;
+}
+.bloglistitem a, .bloglistitem span{
+	display:inline-block;
+}
 .splashhead {
 	display: inline-block;
 	margin: 15px 0px;
 }
-.nuko {
-	width: 28px;
+.nukosplash {
+	image-rendering: pixelated;
+	width: 30px;
 	padding-left: 10px;
 	vertical-align: 0%;
+}
+.nuko {
+	image-rendering: pixelated;
+	width: 40px;
 }
 #splash{
 	text-align:center;

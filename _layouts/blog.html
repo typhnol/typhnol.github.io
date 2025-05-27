@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="sfx.js" defer></script>
+	<script>
+		function delay (URL) {
+				setTimeout( function() { window.location = URL }, 200 );
+		}
+	</script>
+</head>
+<div class="wholething">
+	<!-- one massive shit hole -->
+	<div class="titlenav">
+		<header>
+			<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
+		</header>
+		<nav>
+			<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
+			<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
+			<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
+			<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
+		</nav>
+	</div>
+	<section>
+		<h2>{{ site.title }}</h2>
+		<div class="bloglistcontainer">
+			<ul class="bloglist">
+			  {% for post in site.posts %}
+				<li class="bloglistitem">
+				  <a href="{{ post.url }}">{{ post.title }}</a>
+				  <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+				</li>
+			  {% endfor %}
+			</ul>
+		</div>
+	</section>
+</div>

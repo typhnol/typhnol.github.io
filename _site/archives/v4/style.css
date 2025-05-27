@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@font-face{
+	font-family:VCR_OSD;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/VCR_OSD_MONO.woff2);
+}
+@font-face{
+	font-family:RWFont;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/rain-world-menu.woff2);
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+* {
+	scrollbar-color:white black;
+}
+*::-webkit-scrollbar-thumb {
+	background-color:white;
+}
+*::-webkit-scrollbar-track {
+	background-color:black;
+}
+
+
+.upper{
+	text-transform:uppercase;
+}
+.lower{
+	text-transform:lowercase;
+}
+p{
+	font-size:20px;
+}
+a{
+	text-decoration:none;
+	font-size:20px;
+	color:#ff1a3c;
+}
+a:hover{
+	color:#7e0c1d;
+}
+body{
+	color:white;
+	background-color:black;
+	font-family: "Kode Mono", monospace;
+}
+h1{
+	font-size: 35px;
+	font-family:VCR_OSD;
+}
+h2{
+	font-family:RWFont;
+	font-weight:normal;
+	font-size:30px;
+	margin:5px 0px;
+}
+.wholething{
+	text-align:center;
+	margin-top:20vh;
+}
+.container{
+	display:flex;
+	align-items:center;
+	margin:0px 10%;
+	justify-content:center;
+}
+.typhmain{
+	width:200px;
+}
+.textmain{
+	text-align:left;
+	padding:0px 20px;
+}
+.updates{
+	border:2px solid white;
+	padding:20px;
+	height:300px;
+	overflow-y:scroll;
+	text-align:left;
+}
+.dateEntry{
+	text-transform:lowercase;
+	font-size:15px;
+}
+#motm{
+	width:300px;
+}
+#statuscafe {
+    padding:20px;
+    background-color:black;
+    margin:0px 0px 30px 10px;
+	border-top:3px dashed white;
+	border-bottom:3px dashed white;
+}
+#statuscafe-username {
+	font-size:18.5px;
+}
+#statuscafe-content {
+    padding-top:10px;
+}
+.container2{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin:10px 10%;
+}
+.updates-section{
+	width:800px;
+}
+.motm-section{
+	padding:0px 10%;
+}
+.footer{
+	font-size:15px;
+	margin:20px;
+}
+.aboutcontent{
+	margin:30px 10%;
+}
+.whatlisten{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:20px 0px;
+	text-align:left;
+	padding:20px 0px;
+	border-top:3px dashed white;
+	border-bottom:3px dashed white;
+}
+#typhnol{
+	width:150px;
+	height:200px;
+	object-fit:cover;
+	object-position:50% 100%;
+}
+.songsec2{
+	margin-left:20px;
+}
+#lasttrack{
+	display:grid;
+	grid-template-columns:80px auto;
+	grid-template-rows: auto;
+	align-items:center;
+}
+#details{
+	margin:0px 20px;
+}
+#songname{
+	font-size:22px;
+}
+#artist{
+	color:white;
+	font-size: 16px;
+}
+#playing{
+	font-size: 16px;
+}
+ul {
+	margin:5px 10%;
+	list-style-image:url('resources/karma10icon.png');
+	text-align:left;
+}
+li span{
+	display:inline-block;
+	vertical-align:middle;
+	margin-bottom:10px;
+}
+.listcontainer{
+	display:flex;
+	justify-content:center;
+}
+.listcontainer div{
+	width:30%;
+}
+.listcontainer p,.listcontainer a{
+	font-size:15px;
+	margin:10px 0px;
+}
+.mini{
+	width:100px;
+	position:relative;
+	object-fit:cover;
+	object-position:100% 75%;
+	top:20px;
+}
+#minityphnol{
+	left:20px;
+	margin:-10px;
+	height:70px;
+}
+#minioce{
+	left:-10px;
+	margin:-10px;
+	height:70px;
+}
+#miniwyn{
+	left:6px;
+	margin:-10px;
+	height:70px;
+}
+#ghost {
+	object-fit:cover;
+    width: 80px;
+	height:120px
+}
+#spamton {
+    width: 50px;
+    cursor: pointer;
+}
+#baba {
+    width: 400px;
+}
+#mewo {
+    width: 60px;
+    cursor: grab;
+}
+#scug {
+    cursor:pointer;
+}
+#ori {
+    width: 80px;
+    cursor: pointer;
+}
+.sillygoobers{
+	margin:20px 0px;
+	padding:20px 0px;
+	border-top:3px solid white;
+	border-bottom:3px solid white;
+}
+.artimg{
+	display:inline-block;
+	vertical-align:top;
+	margin:8px 5px;
+	width:300px;
+}
+#splash{
+	text-align:center;
+	position:absolute;
+	width:340px;
+	height:240px;
+	padding:10px 20px 0px 20px;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	background-color:#000000;
+	box-shadow:10px 10px #ffffff;
+	border:2px solid white;
+}
+.splashnote{
+	font-size:12px;
+}
+.splashnote span{
+	color:#ff1a3c;
+}
+#splash *{
+	margin:15px 0px;
+}
+#particles-js{
+	height:100vh;
+}
+
+@media screen and (max-width: 545px){
+	#typhnol{
+		display:none;
+	}
+}
+@media screen and (max-width: 800px){
+	.container{
+		display:flex;
+		flex-direction: column;
+		margin:0px 10% 50px 10%;
+	}
+	.textmain{
+		text-align:center;
+	}
+	.listcontainer{
+		flex-direction:column;
+		justify-content:center;
+	}
+	.listcontainer div{
+		width:initial;
+	}
+}
+@media screen and (max-width: 1000px){
+	.updates{
+		margin:10px 10%;
+		height:220px;
+	}
+	.container2{
+		display:initial;
+		margin:0;
+	}
+	.motm-section{
+		margin-top:30px;
+	}
+	.updates-section{
+		width:100%;
+	}
+}

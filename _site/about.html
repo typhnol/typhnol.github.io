@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ABOUT</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<meta name="darkreader-lock">
+		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+		<script src="gettrack.js"></script>
+		<script src="sfx.js" defer></script>
+		<script>
+			function delay (URL) {
+				setTimeout( function() { window.location = URL }, 200 );
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wholething">
+			<div class="titlenav">
+				<header>
+					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
+				</header>
+				<nav>
+					<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
+					<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
+				</nav>
+			</div>
+			<section>
+				<div class="aboutcontent">
+					<h2>general</h2>
+					<p class="lower">I'm typhnol (he/him), typh shortened, an average internet lurker. Generally i'll love any game that's fun and has a good story. I'll listen to anything that sounds good to my ears.</p>
+				</div>
+				<div class="whatlisten">
+					<div class="songsec2">
+						<h2>what am i listening to?</h2>
+						<div id="lasttrack">
+							<img src="" alt="album cover unavailable" id="albumcover" width=80px>
+							<a href="" id="songurl">
+								<div id="details">
+									<p id="songname"></p>
+									<p id="artist"></p>
+									<p id="playing" style="color:grey;"></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="listcontainer">
+					<div>
+						<h2>games</h2>
+						<ul>
+							<li><span>ULTRAKILL</span></li>
+							<li><span>Punishing: Gray Raven</span></li>
+							<li><span>Wuthering Waves</span></li>
+							<li><span>Nine Sols</span></li>
+							<li><span>Hollow Knight</span></li>
+							<li><span>Rain World</span></li>
+							<li><span>OMORI</span></li>
+							<li><span>Undertale</span></li>
+							<li><span>Deltarune</span></li>
+							<li><span>Hyper Light Drifter</span></li>
+							<li><span>OneShot</span></li>
+							<li><span>Ori TBF and WotW</span></li>
+							<li><span>Mouthwashing</span></li>
+							<li><span>Little Goody Two Shoes</span></li>
+							<li><span>Baba Is You</span></li>
+							<li><span>Minecraft</span></li>
+							<li><span>Sky: Children of the Light</span></li>
+						</ul>
+					</div>
+					<div>
+						<h2>music</h2>
+						<ul>
+							<li><span>Heaven Pierce Her/Hakita/redherring.</span></li>
+							<li><span>Vanguard Sound</span></li>
+							<li><span>Toby Fox</span></li>
+							<li><span>boggio</span></li>
+							<li><span>NyxTheShield</span></li>
+							<li><span>Nastyona</span></li>
+							<li><span>inabakumori</span></li>
+							<li><span>AZALI</span></li>
+							<li><span>Touhou東方 Project/ZUN</span></li>
+							<li><span>LAST WALTZ(album) by world's end girlfriend</span></li>
+							<li><span>THIRTY三十(album) by Oliver Buckland</span></li>
+							<li><span>... additionally, the soundtrack of anything else on the games list</span></li>
+						</ul>
+						<p class="lower">By the way, i've been trying to make <a href="https://www.youtube.com/@typhnol" target="_blank">music</a> as well [shameful plug]</p>
+					</div>
+				</div>
+				<h2>silly goobers</h2>
+				<img src="resources/typhnolmini.png" id="minityphnol" class="mini" alt="Mini Typhnol">
+				<img src="resources/wynmini.png" id="miniwyn" class="mini" alt="Mini Winnie">
+				<img src="resources/ocemini.png" id="minioce" class="mini" alt="Mini Ocean">
+				<div class="sillygoobers">
+					<img src="resources/baba.GIF" id="baba" alt="baba walking">
+					<br>
+					<img src="resources/ghostcling.png" id="ghost" alt="the knight clinging on the wall">
+					<img src="resources/ori.gif" id="ori" alt="ori balancing">
+					<img src="resources/spamton.GIF" id="spamton" alt="spamton dancing">
+					<img src="resources/mewo.gif" id="mewo" alt="mewo resting">
+					<img src="resources/scug.gif" id="scug" alt="slugcat standing">
+				</div>
+			</section>
+			<footer>
+				<p class="footer">2025-typhnol</p>
+			</footer>
+		</div>
+		<script>
+			var mewo = document.getElementById("mewo");
+			var spamton = document.getElementById("spamton");
+			var ori = document.getElementById("ori");
+			var survivor = document.getElementById("scug");
+			var ghost = document.getElementById("ghost");
+			
+			var meow = new Audio("https://file.garden/Zlk30agh4hF11eOU/mewo.wav");
+			var laugh = new Audio("https://file.garden/Zlk30agh4hF11eOU/spamton.wav");
+			var yipee = new Audio("https://file.garden/Zlk30agh4hF11eOU/ori.wav");
+			var waaaa = new Audio("https://file.garden/Zlk30agh4hF11eOU/waaaa.WAV");
+			var hit = new Audio("https://file.garden/Zlk30agh4hF11eOU/parry.wav");
+			
+			laugh.volume = 0.2;
+			yipee.volume = 0.1;
+			meow.volume = 0.3;
+			hit.volume = 0.4;
+			function mewoMeow(){
+				meow.currentTime = 0;
+				meow.play();
+			}
+			function spamtonLaugh(){
+				laugh.play();
+			}
+			function oriYipee(){
+				yipee.play();
+			}
+			function survivorWaaaa(){
+				waaaa.play();
+			}
+			function ghostHit(){
+				hit.play();
+			}
+			
+			mewo.addEventListener("click", mewoMeow);
+			ori.addEventListener("click", oriYipee);
+			spamton.addEventListener("click", spamtonLaugh);
+			survivor.addEventListener("click", survivorWaaaa);
+			ghost.addEventListener("click", ghostHit);
+			
+		</script>
+	</body>
+</html>
