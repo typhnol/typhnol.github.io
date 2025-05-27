@@ -355,6 +355,9 @@ li span{
 .bloglistitem a, .bloglistitem span{
 	display:inline-block;
 }
+.blogpost {
+	padding: 0px 20px;
+}
 .splashhead {
 	display: inline-block;
 	margin: 15px 0px;
