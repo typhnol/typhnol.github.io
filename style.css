@@ -365,6 +365,9 @@ li span{
 .blogpost p{
 	text-align:left;
 }
+.blogpost ul{
+	font-size:20px;
+}
 .splashhead {
 	display: inline-block;
 	margin: 15px 0px;
