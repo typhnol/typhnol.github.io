@@ -80,6 +80,12 @@ h2{
 	font-size:30px;
 	margin:5px 0px;
 }
+h3{
+	font-family:RWFont;
+	font-weight:normal;
+	font-size:25px;
+	margin:5px 0px;
+}
 #chat{
 	padding:0;
 	position: fixed;
