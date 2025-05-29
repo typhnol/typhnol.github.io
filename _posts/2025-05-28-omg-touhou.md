@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OMG touhou"
-date: 2025-05-28 20:18:00
+date: 2025-05-28 20:42:00
 author: typhnol
 ---
 idk how to start blog posts im just gonna start yapping
