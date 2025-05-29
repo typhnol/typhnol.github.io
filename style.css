@@ -356,11 +356,14 @@ li span{
 	display:inline-block;
 }
 .blogpost {
-	padding: 0px 20px;
+	padding: 0px 20%;
 }
-.blogpost  img {
+.blogpost img {
 	max-width: 100%;
 	height: auto;
+}
+.blogpost p{
+	text-align:left;
 }
 .splashhead {
 	display: inline-block;
