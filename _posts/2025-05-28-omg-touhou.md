@@ -32,7 +32,7 @@ i really like the touhou 6 soundtrack because it's just the most recognizable fo
 - 六十年目の東方裁判　～ Fate of Sixty Years (TH9)
 - ハートフェルトファンシー (TH11)
 - 少女さとり　～ 3rd eye (TH11)
-- 青空の影 (TH12
+- 青空の影 (TH12)
 
 <br>
 this likely won't be all, since i haven't really extensively listened to the soundtracks after TH11. and uh... sorry about the track names not being translated. i copied them off spotify.
