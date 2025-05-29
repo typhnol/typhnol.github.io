@@ -419,6 +419,9 @@ li span{
 		transform:translateX(0%);
 		animation: none;
 	}
+	.blogpost {
+		padding: 0px 20px;
+	}
 }
 @media screen and (max-width: 800px){
 	.textmain{
