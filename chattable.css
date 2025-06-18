@@ -40,6 +40,9 @@ body {
 	background-color: black;
 	border: 1px solid #222222;
 }
+.pinned:hover {
+	opacity: 0.3;
+}
 #replyBanner{
 	background-color: black;
 	color: white;

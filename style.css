@@ -111,6 +111,7 @@ h3{
 	vertical-align: middle;
 	line-height: 30px;
 	padding: 0px 5px;
+	text-align: right;
 }
 .wholething{
 	text-align:center;
@@ -138,7 +139,8 @@ a:hover {
 .container{
 	display:flex;
 	align-items:center;
-	margin:30px 10%;
+	margin:30px auto;
+	max-width: 700px;
 	padding:0px 20px 15px 20px;
 	justify-content:center;
 	background-color: rgba(0, 0, 0, 0.45);
