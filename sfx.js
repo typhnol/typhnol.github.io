@@ -7,8 +7,6 @@ var link4 = document.getElementById("bloglink");
 var link5 = document.getElementById("omolink");
 var link6 = document.getElementById("archivelink");
 
-console.log(link1);
-
 var menu = new Audio("https://file.garden/Zlk30agh4hF11eOU/generic%20menu%20selection.wav");
 var menuClick = new Audio("https://file.garden/Zlk30agh4hF11eOU/select.wav");
 menu.volume = 0.4;

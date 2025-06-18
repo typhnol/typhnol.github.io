@@ -28,19 +28,41 @@ body {
 	font-family:RWFont;
 	font-size:15px;
 }
+#scrollToBottom {
+	border: 1px solid white;
+	background-color: black;
+	opacity: 0.5;
+}
+.pinned{
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background-color: black;
+	border: 1px solid #222222;
+}
+#replyBanner{
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+}
 #loadMore {
 	color:white;
 }
 #timestamp {
-	color:grey;
+	display: none;
 }
 #settings {
 	background-image:none;
 	color:white;
+	border-radius: 5px;
+	border: 1px solid white;
+	width: 60px;
+	padding: 0px 2px;
+	background-color: black;
 }
 #settings:after {
   position:absolute;
-  right:0;
+  right:5px;
   top:0;
   content:"settings";
   color:white;
@@ -59,6 +81,9 @@ body {
 #settingsMenu{
 	color: white;
 }
+#loginBanner {
+	transition: none;
+}
 .highlight{
 	background-color:#ff1a3c;
 }
@@ -70,12 +95,16 @@ body {
 	background-image:url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emoji.png);
 }
 #is_typing > span{
-	background-color:black;
+	background-color:white;
+}
+#is_typing {
+	background-color:transparent;
 }
 #input {
 	border-radius:0;
 	background-color:black;
 	border-top:1px solid grey;
+	font-size: 12px;
 	color: white;
 	font-family:"Kode Mono", monospace;
 }
