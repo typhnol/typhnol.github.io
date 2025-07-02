@@ -8,6 +8,8 @@
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 		<script src="sfx.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+   		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 		<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
 		<script>
 			chattable.initialize({
@@ -42,68 +44,80 @@
 					</div>
 				</div>
 				<div id="statuscafe"><div id="marquee"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div></div><script src="https://status.cafe/current-status.js?name=typhnol" defer></script>
-				<div class="updates-section">
-					<h2><img class="updatehead" src="resources/update.gif"></h2>
-					<div class="updates">
-					<!-- 
-					<p class="dateEntry">//<br>ABC</p>
-					<br> 
-					-->
-					<p class="dateEntry">6/17/25<br>Once again forgot to add this update entry whoopsies! Edited some of the styling in Chattable, made the image on the home page change whenever it's refreshed, and reworked the art page. lots of work done...planning more....</p>
-					<br>
-					<p class="dateEntry">5/26/25<br>I kind of forgot to add this update entry lmao. i made a blog...now my inside thoughts are outside thoughts!!!</p>
-					<br> 
-					<p class="dateEntry">5/7/25<br>Added back some old captions in art. i'll come up with a better system later...maybe with more in depth commentary if anyone bothers to read it</p>
-					<br> 
-					<p class="dateEntry">4/18/25<br>Oh boy another one...minor changes in design here and there. Got rid of stripes. Added a new section in #art where my old layouts are viewable.</p>
-					<br>
-					<p class="dateEntry">3/23/25<br>YEAH!!! Small website design changes.</p>
-					<br>
-					<p class="dateEntry">1/23/25<br>Chattable is now collapsible. Just click the banner.</p>
-					<br>
-					<p class="dateEntry">12/9/24<br>Chattable is no longer discontinued yipee yay! I added it back.</p>
-					<br>
-					<p class="dateEntry">8/30/24<br>Re-did the entire website layout again. Removed visitor count, it was a bit silly-looking.</p>
-					<br>
-					<p class="dateEntry">7/10/22<br>Removed Chattable (<s>it has been discontinued, and I don't plan on using a replacement</s>). Added chibis of me and my friends. Changed red saturation.</p>
-					<br>
-					<p class="dateEntry">6/22/24<br>Changed website design again. A lot simpler this time because i'm too lazy. The old one became hard on my eyes.</p>
-					<br>
-					<p class="dateEntry">6/2/24<br>Added background image.</p>
-					<br>
-					<p class="dateEntry">5/31/24<br>Added some music to homepage.</p>
-					<br>
-					<p class="dateEntry">5/30/24<br>New typhnol design for the something-th time. Small fixes to make the site look nicer.</p>
-					<br>
-					<p class="dateEntry">5/12/24<br>Added chat. Website now mobile compatible.</p>
-					<br>
-					<p class="dateEntry">5/9/24<br>Redesigned entire website. Not mobile compatible yet.</p>
-					<br>
-					<p class="dateEntry">4/29/24<br>No more typhnol on the front page. Miscellaneous updates to the rest of the pages.</p>
-					<br>
-					<p class="dateEntry">4/8/24<br>Modified homepage typhnol design.</p>
-					<br>
-					<p class="dateEntry">3/31/24<br>Art page completed. About page updated.</p>
-					<br>
-					<p class="dateEntry">2/26/24<br>Changed homepage typhnol design.</p>
-					<br>
-					<p class="dateEntry">1/26/24<br>Added mobile layout.</p>
-					<br>
-					<p class="dateEntry">1/19/24<br>About page completed? Added couple more stamps and buttons.</p>
-					<br>
-					<p class="dateEntry">1/15/24<br>Homepage completed.</p>
-					<br>
-					<p class="dateEntry">1/12/24<br>More styling. More content or something??</p>
-					<br>
-					<p class="dateEntry">1/8/24<br>Changed to correct year. Adding layout. Added nav to other pages.</p>
-					<br>
-					<p class="dateEntry">1/7/24<br>Website creation. Added homepage.</p>
+				<div class="container2">
+					<div class="sand">
+						<h2>sand</h2>
+						<div id="sand">
+							<script src="fallingsand.js"></script>
+						</div>
+					</div>
+					
+					<div class="updates-section">
+						<h2><img class="updatehead" src="resources/update.gif"></h2>
+						<div class="updates">
+						<!-- 
+						<p class="dateEntry">//<br>ABC</p>
+						<br> 
+						-->
+						<p class="dateEntry">7/1/25<br>Sand simulator</p>
+						<br> 
+						<p class="dateEntry">6/17/25<br>Once again forgot to add this update entry whoopsies! Edited some of the styling in Chattable, made the image on the home page change whenever it's refreshed, and reworked the art page. lots of work done...planning more....</p>
+						<br>
+						<p class="dateEntry">5/26/25<br>I kind of forgot to add this update entry lmao. i made a blog...now my inside thoughts are outside thoughts!!!</p>
+						<br> 
+						<p class="dateEntry">5/7/25<br>Added back some old captions in art. i'll come up with a better system later...maybe with more in depth commentary if anyone bothers to read it</p>
+						<br> 
+						<p class="dateEntry">4/18/25<br>Oh boy another one...minor changes in design here and there. Got rid of stripes. Added a new section in #art where my old layouts are viewable.</p>
+						<br>
+						<p class="dateEntry">3/23/25<br>YEAH!!! Small website design changes.</p>
+						<br>
+						<p class="dateEntry">1/23/25<br>Chattable is now collapsible. Just click the banner.</p>
+						<br>
+						<p class="dateEntry">12/9/24<br>Chattable is no longer discontinued yipee yay! I added it back.</p>
+						<br>
+						<p class="dateEntry">8/30/24<br>Re-did the entire website layout again. Removed visitor count, it was a bit silly-looking.</p>
+						<br>
+						<p class="dateEntry">7/10/22<br>Removed Chattable (<s>it has been discontinued, and I don't plan on using a replacement</s>). Added chibis of me and my friends. Changed red saturation.</p>
+						<br>
+						<p class="dateEntry">6/22/24<br>Changed website design again. A lot simpler this time because i'm too lazy. The old one became hard on my eyes.</p>
+						<br>
+						<p class="dateEntry">6/2/24<br>Added background image.</p>
+						<br>
+						<p class="dateEntry">5/31/24<br>Added some music to homepage.</p>
+						<br>
+						<p class="dateEntry">5/30/24<br>New typhnol design for the something-th time. Small fixes to make the site look nicer.</p>
+						<br>
+						<p class="dateEntry">5/12/24<br>Added chat. Website now mobile compatible.</p>
+						<br>
+						<p class="dateEntry">5/9/24<br>Redesigned entire website. Not mobile compatible yet.</p>
+						<br>
+						<p class="dateEntry">4/29/24<br>No more typhnol on the front page. Miscellaneous updates to the rest of the pages.</p>
+						<br>
+						<p class="dateEntry">4/8/24<br>Modified homepage typhnol design.</p>
+						<br>
+						<p class="dateEntry">3/31/24<br>Art page completed. About page updated.</p>
+						<br>
+						<p class="dateEntry">2/26/24<br>Changed homepage typhnol design.</p>
+						<br>
+						<p class="dateEntry">1/26/24<br>Added mobile layout.</p>
+						<br>
+						<p class="dateEntry">1/19/24<br>About page completed? Added couple more stamps and buttons.</p>
+						<br>
+						<p class="dateEntry">1/15/24<br>Homepage completed.</p>
+						<br>
+						<p class="dateEntry">1/12/24<br>More styling. More content or something??</p>
+						<br>
+						<p class="dateEntry">1/8/24<br>Changed to correct year. Adding layout. Added nav to other pages.</p>
+						<br>
+						<p class="dateEntry">1/7/24<br>Website creation. Added homepage.</p>
+					</div>
+					</div>
+					<div class="motm-section">
+						<h2>hello</h2>
+						<img id="motm" alt="media of the month" src="">
+					</div>
 				</div>
-				</div>
-				<div class="motm-section">
-					<h2>hello</h2>
-					<img id="motm" alt="media of the month" src="">
-				</div>
+					
 			</section>
 			<footer>
 				<p class="footer">2025-typhnol</p>
