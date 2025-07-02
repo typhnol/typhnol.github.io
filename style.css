@@ -170,6 +170,12 @@ a:hover {
 	height: 400px;
 	border: 1px solid white;
 }
+#sand, #sand > * {
+	touch-action: none;
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+}
 .updatehead {
 	width: 200px;
 	image-rendering: pixelated;
@@ -491,8 +497,5 @@ li span{
 	}
 	.sand {
 		order: 3;
-	}
-	#sand, #sand > * {
-		touch-action: none;
 	}
 }
