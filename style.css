@@ -492,4 +492,7 @@ li span{
 	.sand {
 		order: 3;
 	}
+	#sand, #sand > * {
+		touch-action: none;
+	}
 }
