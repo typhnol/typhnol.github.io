@@ -143,6 +143,7 @@ function snakeSketch(p) {
                 p.triangle(150, 300, 80, 270, 220, 270);
                 p.fill(0);
                 p.stroke(0);
+                p.text('PRESS ANY ARROW (gameplay SUCKS on mobile please play on PC for better experience)', 30, 80, 250, 300);
                 
                 if(p.mouseX >= 0 && p.mouseX <= 30 && p.mouseY >= 80 && p.mouseY <= 220 && p.mouseIsPressed) {
                     gameRunning = true;
