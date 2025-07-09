@@ -133,7 +133,6 @@ function snakeSketch(p) {
             p.fill(0);
             p.textSize(25);
             p.textAlign(p.CENTER);
-            p.text('PRESS ANY ARROW KEY', 50, 120, 200, 300);
             
             if(isMobileDevice) {
                 p.noStroke();
@@ -142,6 +141,7 @@ function snakeSketch(p) {
                 p.triangle(150, 0, 80, 30, 220, 30);
                 p.triangle(300, 150, 270, 80, 270, 220);
                 p.triangle(150, 300, 80, 270, 220, 270);
+                p.fill(0);
                 p.stroke(0);
                 
                 if(p.mouseX >= 0 && p.mouseX <= 30 && p.mouseY >= 80 && p.mouseY <= 220 && p.mouseIsPressed) {
@@ -157,6 +157,8 @@ function snakeSketch(p) {
                     gameRunning = true;
                     snake.dir(0, 1);
                 }
+            } else {
+                p.text('PRESS ANY ARROW KEY', 50, 120, 200, 300);
             }
 
             if (p.keyIsDown(p.LEFT_ARROW) && !p.keyIsDown(p.RIGHT_ARROW) && !p.keyIsDown(p.UP_ARROW) && !p.keyIsDown(p.DOWN_ARROW) && snake.xspeed !== 1) {
