@@ -106,6 +106,46 @@ function snakeSketch(p) {
         }
     }
 
+    p.touchStarted = function() {
+        touchStartX = p.mouseX;
+        touchStartY = p.mouseY;
+        return false;
+    };
+    
+    p.touchEnded = function() {
+        touchEndX = p.mouseX;
+        touchEndY = p.mouseY;
+        if(p.mouseX <= p.width && p.mouseX >= 0 && p.mouseY <= p.height && p.mouseY >= 0) {
+            handleSwipe();
+        }
+        return false;
+    };
+
+    function handleSwipe() {
+        let dx = touchEndX - touchStartX;
+        let dy = touchEndY - touchStartY;
+        
+        let threshold = 30;
+        
+        if (Math.abs(dx) > Math.abs(dy)) {
+            if (dx > threshold && snake.xspeed !== -1) {
+                snake.dir(1, 0);
+                if (!gameRunning) gameRunning = true;
+            } else if (dx < -threshold && snake.xspeed !== 1) {
+                snake.dir(-1, 0);
+                if (!gameRunning) gameRunning = true;
+            }
+        } else {
+            if (dy > threshold && snake.yspeed !== -1) {
+                snake.dir(0, 1);
+                if (!gameRunning) gameRunning = true;
+            } else if (dy < -threshold && snake.yspeed !== 1) {
+                snake.dir(0, -1);
+                if (!gameRunning) gameRunning = true;
+            }
+        }
+    }
+
     p.draw = function() {
         if(gameRunning === false) {
             p.background(0);
@@ -146,43 +186,8 @@ function snakeSketch(p) {
             p.fill(255, 0, 0);
             p.rect(food.x, food.y, scl, scl);
         }
-    }
 
-    p.touchStarted = function() {
-        touchStartX = p.mouseX;
-        touchStartY = p.mouseY;
-        return false;
-    };
-    
-    p.touchEnded = function() {
-        touchEndX = p.mouseX;
-        touchEndY = p.mouseY;
-        handleSwipe();
-        return false;
-    };
-
-    function handleSwipe() {
-        let dx = touchEndX - touchStartX;
-        let dy = touchEndY - touchStartY;
-        let threshold = 30;
-        
-        if (Math.abs(dx) > Math.abs(dy)) {
-            if (dx > threshold && snake.xspeed !== -1) {
-                snake.dir(1, 0);
-                if (!gameRunning) gameRunning = true;
-            } else if (dx < -threshold && snake.xspeed !== 1) {
-                snake.dir(-1, 0);
-                if (!gameRunning) gameRunning = true;
-            }
-        } else {
-            if (dy > threshold && snake.yspeed !== -1) {
-                snake.dir(0, 1);
-                if (!gameRunning) gameRunning = true;
-            } else if (dy < -threshold && snake.yspeed !== 1) {
-                snake.dir(0, -1);
-                if (!gameRunning) gameRunning = true;
-            }
-        }
+        p.fill(0);
     }
 }
 

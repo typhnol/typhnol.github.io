@@ -8,8 +8,6 @@
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 		<script src="sfx.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-   		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 		<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
 		<script>
 			chattable.initialize({
@@ -45,6 +43,8 @@
 				</div>
 				<div id="statuscafe"><div id="marquee"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div></div><script src="https://status.cafe/current-status.js?name=typhnol" defer></script>
 				<div class="container2">
+					<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+   					<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 					<div class="sand">
 						<!-- haha i do not know what i am doing! thanks to coding train challenges btw -->
 						<h2>sand</h2>
@@ -136,6 +136,11 @@
 			<iframe src='https://iframe.chat/embed?chat=79970941' id='chattable' class="chattable"></iframe>
 		</div>
 		<script>
+			window.addEventListener("keydown", function(e) {
+				if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+					e.preventDefault();
+				}
+			}, false);
 			function getRandomInt(min, max) {
 				min = Math.ceil(min);
 				max = Math.floor(max);
