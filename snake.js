@@ -3,8 +3,9 @@ function snakeSketch(p) {
     var scl = 15;
     var food;
     var gameRunning = false;
-    var touchStartX, touchStartY;
-    var touchEndX, touchEndY;
+    let details = navigator.userAgent;
+    let regexp = /android|iphone|kindle|ipad/i;
+    let isMobileDevice = regexp.test(details);
 
     function Snake() {
         this.x = 120;
@@ -42,7 +43,7 @@ function snakeSketch(p) {
         }
         
         this.death = function() {
-            if (this.x <= 0 || this.x >= p.width || this.y <= 0 || this.y >= p.height) {
+            if (this.x < 0 || this.x >= p.width || this.y < 0 || this.y >= p.height) {
                 this.reset();
                 return;
             }
@@ -81,7 +82,7 @@ function snakeSketch(p) {
     p.setup = function() {
         let snakeCanvas = p.createCanvas(300, 300);
         snakeCanvas.parent('snake');
-        p.frameRate(10);
+        p.frameRate(8);
         snake = new Snake();
         
         pickLocation();
@@ -106,42 +107,16 @@ function snakeSketch(p) {
         }
     }
 
-    p.touchStarted = function() {
-        touchStartX = p.mouseX;
-        touchStartY = p.mouseY;
-        return false;
-    };
-    
-    p.touchEnded = function() {
-        touchEndX = p.mouseX;
-        touchEndY = p.mouseY;
-        if(p.mouseX <= p.width && p.mouseX >= 0 && p.mouseY <= p.height && p.mouseY >= 0) {
-            handleSwipe();
-        }
-        return false;
-    };
-
-    function handleSwipe() {
-        let dx = touchEndX - touchStartX;
-        let dy = touchEndY - touchStartY;
-        
-        let threshold = 30;
-        
-        if (Math.abs(dx) > Math.abs(dy)) {
-            if (dx > threshold && snake.xspeed !== -1) {
-                snake.dir(1, 0);
-                if (!gameRunning) gameRunning = true;
-            } else if (dx < -threshold && snake.xspeed !== 1) {
+    if(isMobileDevice) {
+        p.mousePressed = function() {
+            if(p.mouseX >= 0 && p.mouseX <= 30 && p.mouseY >= 80 && p.mouseY <= 220) {
                 snake.dir(-1, 0);
-                if (!gameRunning) gameRunning = true;
-            }
-        } else {
-            if (dy > threshold && snake.yspeed !== -1) {
-                snake.dir(0, 1);
-                if (!gameRunning) gameRunning = true;
-            } else if (dy < -threshold && snake.yspeed !== 1) {
+            } else if(p.mouseY >= 0 && p.mouseY <= 30 && p.mouseX >= 80 && p.mouseX <= 220) {
                 snake.dir(0, -1);
-                if (!gameRunning) gameRunning = true;
+            } else if(p.mouseX >= 270 && p.mouseX <= 300 && p.mouseY >= 80 && p.mouseY <= 220) {
+                snake.dir(1, 0);
+            } else if(p.mouseY >= 270 && p.mouseY <= 300 && p.mouseX >= 80 && p.mouseX <= 220) {
+                snake.dir(0, 1);
             }
         }
     }
@@ -160,6 +135,30 @@ function snakeSketch(p) {
             p.textAlign(p.CENTER);
             p.text('PRESS ANY ARROW KEY', 50, 120, 200, 300);
             
+            if(isMobileDevice) {
+                p.noStroke();
+                p.fill('rgba(255, 255, 255, 0.4)');
+                p.triangle(0, 150, 30, 80, 30, 220);
+                p.triangle(150, 0, 80, 30, 220, 30);
+                p.triangle(300, 150, 270, 80, 270, 220);
+                p.triangle(150, 300, 80, 270, 220, 270);
+                p.stroke(0);
+                
+                if(p.mouseX >= 0 && p.mouseX <= 30 && p.mouseY >= 80 && p.mouseY <= 220 && p.mouseIsPressed) {
+                    gameRunning = true;
+                    snake.dir(-1, 0);
+                } else if(p.mouseY >= 0 && p.mouseY <= 30 && p.mouseX >= 80 && p.mouseX <= 220 && p.mouseIsPressed) {
+                    gameRunning = true;
+                    snake.dir(0, -1);
+                } else if(p.mouseX >= 270 && p.mouseX <= 300 && p.mouseY >= 80 && p.mouseY <= 220 && p.mouseIsPressed) {
+                    gameRunning = true;
+                    snake.dir(1, 0);
+                } else if(p.mouseY >= 270 && p.mouseY <= 300 && p.mouseX >= 80 && p.mouseX <= 220 && p.mouseIsPressed) {
+                    gameRunning = true;
+                    snake.dir(0, 1);
+                }
+            }
+
             if (p.keyIsDown(p.LEFT_ARROW) && !p.keyIsDown(p.RIGHT_ARROW) && !p.keyIsDown(p.UP_ARROW) && !p.keyIsDown(p.DOWN_ARROW) && snake.xspeed !== 1) {
                 gameRunning = true;
                 snake.dir(-1, 0);
@@ -185,9 +184,15 @@ function snakeSketch(p) {
 
             p.fill(255, 0, 0);
             p.rect(food.x, food.y, scl, scl);
-        }
 
-        p.fill(0);
+            if(isMobileDevice) {
+                p.fill('rgba(255, 255, 255, 0.4)');
+                p.triangle(0, 150, 30, 80, 30, 220);
+                p.triangle(150, 0, 80, 30, 220, 30);
+                p.triangle(300, 150, 270, 80, 270, 220);
+                p.triangle(150, 300, 80, 270, 220, 270);
+            }
+        }
     }
 }
 
