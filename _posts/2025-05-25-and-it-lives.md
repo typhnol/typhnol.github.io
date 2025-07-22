@@ -12,7 +12,7 @@ i'm actually not sure what i'm going to put here but uhh yeayyy!!!
 i'll likely use this for rambling about stuff i don't mind putting on the internet 
 <br>
 <br>
-if you want to be notified for new posts this blog for whatever reason...
+if you want to be notified for new posts from this blog for whatever reason...
 <br>
 i have the [feed.xml](https://typhnol.github.io/feed.xml) file right here for ya
 <br>

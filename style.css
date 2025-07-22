@@ -165,6 +165,9 @@ a:hover {
 /* .container2 > div {
 	border: 1px solid white;
 } */
+.minigames {
+	width: 300px;
+}
 #sand{
 	position: relative;
 	width: 300px;
@@ -194,11 +197,24 @@ a:hover {
 	font-size:15px;
 }
 #snake{
+	position: relative;
 	width: 300px;
 	height: 300px;
 	border: 1px solid white;
 }
 #snake, #snake > * {
+	touch-action: none;
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+}
+#minesweeper{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border: 1px solid white;
+}
+#minesweeper, #minesweeper > * {
 	touch-action: none;
 	-webkit-user-select: none; 
 	-ms-user-select: none; 
