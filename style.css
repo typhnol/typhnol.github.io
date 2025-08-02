@@ -336,13 +336,18 @@ li span{
 	margin:-10px;
 	height:70px;
 }
-#minioce{
-	left:-10px;
+#miniwyn{
+	left:12px;
 	margin:-10px;
 	height:70px;
 }
-#miniwyn{
-	left:6px;
+#minioce{
+	left:0px;
+	margin:-10px;
+	height:70px;
+}
+#miniblu{
+	left:-10px;
 	margin:-10px;
 	height:70px;
 }
