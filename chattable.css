@@ -97,6 +97,9 @@ body {
 #emojiTrayToggle{
 	background-image:url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emoji.png);
 }
+.emojiInGrid{
+	height: 25pt;
+}
 #is_typing > span{
 	background-color:white;
 }
