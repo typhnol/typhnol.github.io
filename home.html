@@ -12,9 +12,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 		<script>
-			chattable.initialize({
-				stylesheet : "chattable.css",
-			});
+			// chattable.initialize({
+			//	stylesheet : "chattable.css",
+			// });
 			
 			function delay (URL) {
 				setTimeout( function() { window.location = URL }, 200 );
@@ -142,10 +142,10 @@
 				<p class="footer">2025-typhnol</p>
 			</footer>
 		</div>
-		<div id="chat">
+		<!-- <div id="chat">
 			<div id="chatbanner" class="chatbanner"><p id="bannerlabel">Chat</p></div>
 			<iframe src='https://beta.iframe.chat/embed?chat=79970941' id='chattable' class="chattable"></iframe>
-		</div>
+		</div> -->
 		<script>
 			window.addEventListener("keydown", function(e) {
 				if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
