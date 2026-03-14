@@ -258,9 +258,14 @@ a:hover {
 		transform: translateX(-70%); 
 	}
 }
-.footer{
-	font-size:15px;
+footer{
 	margin: 50px 0px;
+}
+.footer {
+	font-size:15px;
+}
+#forAster {
+	color: black;
 }
 .aboutcontent{
 	margin:30px 10%;
@@ -448,6 +453,12 @@ li span{
 }
 .blogpost ul{
 	font-size:20px;
+}
+#cbox {
+	border: solid 1px white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .splashhead {
 	display: inline-block;
