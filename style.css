@@ -455,10 +455,12 @@ li span{
 	font-size:20px;
 }
 #cbox {
-	border: solid 1px white;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+.markdownguide{
+	font-size: 15px;
 }
 .splashhead {
 	display: inline-block;
