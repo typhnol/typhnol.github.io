@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player</title>
+    <style>
+        @font-face{
+            font-family:DTF;
+            src:url(https://file.garden/Zlk30agh4hF11eOU/DTM-Mono.otf);
+        }
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            color: white;
+            background-color: black;
+            font-family: DTF;
+        }
+        .player {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: block;
+            padding: 20px 5px;
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+        }
+        button {
+            border: none;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
+            font-family: DTF;
+        }
+        button:hover {
+            color: #ff1a3c;
+        }
+        .track-info {
+            font-size: 15px;
+        }
+        button, .track-info {
+            padding: 0px 20px;
+        }
+        audio {
+            filter: saturate(0) grayscale(1) contrast(2);
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="player">
+        <div class="track-info">
+            <span id="trackTitle">Not playing</span>
+        </div>
+        <button id="prevBtn">prev</button>
+        <button id="nextBtn">next</button>
+        <br>
+        <audio id="audio" controls></audio>
+    </div>
+    <script>
+        const playlist = [
+            { title: "Field of Hopes and Dreams", src: "audio/fieldhd.mp3" },
+            { title: "My Castle Town", src: "audio/castletown.mp3" },
+            { title: "A Cyber's World", src: "audio/cyberworld.mp3" },
+            { title: "Green Room", src: "audio/greenroom.mp3" },
+            { title: "The Third Sanctuary", src: "audio/thirdsanctuary.mp3" }
+        ];
+        let currentTrackIndex = 0;
+
+        const audio = document.getElementById('audio');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const trackTitle = document.getElementById('trackTitle');
+
+        function loadTrack(index) {
+            if (index < 0) index = playlist.length - 1;
+            if (index >= playlist.length) index = 0;
+            currentTrackIndex = index;
+            audio.src = playlist[currentTrackIndex].src;
+            trackTitle.textContent = playlist[currentTrackIndex].title;
+            audio.load();
+        }
+
+        function play() {
+            audio.play().catch(e => console.log('Autoplay blocked:', e));
+        }
+
+        function pause() {
+            audio.pause();
+        }
+
+        function togglePlayPause() {
+            if (audio.paused) play();
+            else pause();
+        }
+
+        function next() {
+            loadTrack(currentTrackIndex + 1);
+            play();
+        }
+
+        function prev() {
+            loadTrack(currentTrackIndex - 1);
+            play();
+        }
+
+        function setCookie(name, value, days = 30) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path=/`;
+        }
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+            return null;
+        }
+
+        function saveState() {
+            setCookie('audioTime', audio.currentTime);
+            setCookie('audioPaused', audio.paused ? 'true' : 'false');
+            setCookie('audioTrackIndex', currentTrackIndex);
+        }
+
+        function restoreState() {
+            const savedTime = getCookie('audioTime');
+            const savedPaused = getCookie('audioPaused');
+            const savedIndex = getCookie('audioTrackIndex');
+
+            if (savedIndex !== null) {
+                currentTrackIndex = parseInt(savedIndex, 10);
+            }
+            loadTrack(currentTrackIndex);
+
+            if (savedTime !== null) {
+                audio.currentTime = parseFloat(savedTime);
+            }
+
+            if (savedPaused === 'true') {
+
+            } else {
+                play(); 
+            }
+        }
+
+        setInterval(saveState, 2000);
+        window.addEventListener('beforeunload', saveState);
+
+        audio.addEventListener('play', () => {
+            saveState();
+            sendStatusToParent();
+        });
+        audio.addEventListener('pause', () => {
+            saveState();
+            sendStatusToParent();
+        });
+        audio.addEventListener('ended', () => {
+            next();
+        });
+
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+
+        function sendStatusToParent() {
+            if (window.parent !== window) {
+            window.parent.postMessage({
+                type: 'playerStatus',
+                playing: !audio.paused,
+                currentTime: audio.currentTime,
+                duration: audio.duration,
+                trackTitle: playlist[currentTrackIndex]?.title,
+                trackIndex: currentTrackIndex
+            }, '*');
+            }
+        }
+
+        prevBtn.addEventListener('click', () => sendCommand({ type: 'prev' }));
+        nextBtn.addEventListener('click', () => sendCommand({ type: 'next' }));
+
+        window.addEventListener('message', (event) => {
+            const cmd = event.data;
+            if (!cmd || typeof cmd !== 'object') return;
+
+            switch (cmd.type) {
+            case 'play':
+                play();
+                break;
+            case 'pause':
+                pause();
+                break;
+            case 'toggle':
+                togglePlayPause();
+                break;
+            case 'next':
+                next();
+                break;
+            case 'prev':
+                prev();
+                break;
+            case 'seek':
+                if (typeof cmd.time === 'number') audio.currentTime = cmd.time;
+                break;
+            case 'setPlaylist':
+                if (Array.isArray(cmd.playlist)) {
+                playlist.length = 0;
+                playlist.push(...cmd.playlist);
+                currentTrackIndex = 0;
+                loadTrack(0);
+                play();
+                }
+                break;
+            case 'getStatus':
+                sendStatusToParent();
+                break;
+            default:
+                break;
+            }
+        });
+
+        restoreState();
+        sendStatusToParent();
+        audio.volume = 0.3;
+    </script>
+</body>
+</html>

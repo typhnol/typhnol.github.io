@@ -10,6 +10,7 @@
 		<script src="gettrack.js"></script>
 		<script src="sfx.js" defer></script>
 		<script src="wavy.js" defer></script>
+		<script src="banners.js" defer></script>
 		<script>
 			function delay (URL) {
 				setTimeout( function() { window.location = URL }, 200 );
@@ -39,11 +40,11 @@
 					<div class="songsec2">
 						<h2>what am i listening to?</h2>
 						<div id="lasttrack">
-							<img src="" alt="album cover unavailable" id="albumcover" width=80px>
+							<img src="resources/albumcover.png" alt="album cover unavailable" id="albumcover" width=80px>
 							<a href="" id="songurl">
 								<div id="details">
-									<p id="songname"></p>
-									<p id="artist"></p>
+									<p id="songname">unavailable</p>
+									<p id="artist">unavailable</p>
 									<p id="playing" style="color:grey;"></p>
 								</div>
 							</a>
@@ -150,59 +151,29 @@
 				<p class="footer">Since 2024-typhnol</p>
 			</footer>
 		</div>
-		<audio id="music" controls loop>
-			<source src="https://file.garden/Zlk30agh4hF11eOU/doodling.mp3" type="audio/mp3">
-		</audio>
+		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 		<script>
-			const music = document.getElementById("music");
-			music.volume = 0.5;
+			let mybutton = document.getElementById("topBtn");
 
-			function setCookie(c_name,value,exdays)
-			{
-				var exdate=new Date();
-				exdate.setDate(exdate.getDate() + exdays);
-				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-				document.cookie=c_name + "=" + c_value;
-			}
+			window.onscroll = function() {scrollFunction()};
 
-			function getCookie(c_name)
-			{
-				var i,x,y,ARRcookies=document.cookie.split(";");
-				for (i=0;i<ARRcookies.length;i++)
-				{
-				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-				x=x.replace(/^\s+|\s+$/g,"");
-				if (x==c_name)
-					{
-					return unescape(y);
-					}
+			function scrollFunction() {
+				if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+					mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
 				}
 			}
 
-			var song = document.getElementsByTagName('audio')[0];
-			var played = false;
-			var tillPlayed = getCookie('timePlayed');
-			function update()
-			{
-				if(!played){
-					if(tillPlayed){
-					song.currentTime = tillPlayed;
-					song.play();
-					played = true;
-					}
-					else {
-							song.play();
-							played = true;
-					}
-				}
-
-				else {
-				setCookie('timePlayed', song.currentTime);
-				}
-			}
-			setInterval(update, 500);
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			} 
 		</script>
+		<div>
+			<div id="playbanner" class="playbanner"><p id="playbannerlabel">&gt;</p></div>
+			<iframe id="playerframe" class="playerframe" src="player.html"></iframe>
+		</div>
 		<script>
 			const mewo = document.getElementById("mewo");
 			const spamton = document.getElementById("spamton");

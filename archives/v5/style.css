@@ -38,6 +38,16 @@ a{
 a:hover{
 	color:#7e0c1d;
 }
+.deactivated {
+	color: rgb(73, 73, 73);
+}
+.deactivated:hover {
+	color: rgb(73, 73, 73);
+	cursor: not-allowed;
+}
+.deactivated:active {
+	color: rgb(73, 73, 73);
+}
 @keyframes scrolly {
 	0% {
 		background-position: 0px 0px;

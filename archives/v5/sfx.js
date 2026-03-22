@@ -3,7 +3,6 @@
 var link1 = document.getElementById("homelink");
 var link2 = document.getElementById("aboutlink");
 var link3 = document.getElementById("artlink");
-var link4 = document.getElementById("bloglink");
 var link5 = document.getElementById("omolink");
 var link6 = document.getElementById("archivelink");
 
@@ -26,8 +25,6 @@ link2.addEventListener("mouseover", menuSelectSfx);
 link2.addEventListener("click", menuClickSfx);
 link3.addEventListener("mouseover", menuSelectSfx);
 link3.addEventListener("click", menuClickSfx);
-link4.addEventListener("mouseover", menuSelectSfx);
-link4.addEventListener("click", menuClickSfx);
 
 if (link5) {
 	link5.addEventListener("mouseover", menuSelectSfx);
