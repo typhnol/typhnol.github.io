@@ -9,6 +9,7 @@
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 		<script src="gettrack.js"></script>
 		<script src="sfx.js" defer></script>
+		<script src="wavy.js" defer></script>
 		<script>
 			function delay (URL) {
 				setTimeout( function() { window.location = URL }, 200 );
@@ -22,10 +23,11 @@
 					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
 				</header>
 				<nav>
-					<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
-					<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
-					<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
-					<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
+					<a href="javascript:delay('\home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('\about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('\art.html')" class="navlink lower" id="artlink">Art</a>
+					<a href="javascript:delay('\blog.html')" class="navlink lower" id="bloglink">Blog</a>
+                    <a href="javascript:delay('\entertainment.html')" class="navlink lower" id="funlink">Fun</a>
 				</nav>
 			</div>
 			<section>
@@ -90,6 +92,45 @@
 						<p class="lower">i try to make a bit of <a href="https://www.youtube.com/@typhnol" target="_blank">music</a> as well [shameful plug]</p>
 					</div>
 				</div>
+				<div class="blinkies">
+					<h2>blinkies</h2>
+					<!-- <img src="resources/blinkies/xxx.gif" alt=""> -->
+					<img src="resources/blinkies/loser.gif" alt="Another internet loser">
+					<img src="resources/blinkies/online.gif" alt="chronically online">
+					<img src="resources/blinkies/webdesign.gif" alt="Bad web design">
+					<img src="resources/blinkies/adblocker.gif" alt="I block ads">
+					<img src="resources/blinkies/linux.gif" alt="incompetent linux user">
+					<img src="resources/blinkies/dontlike.gif" alt="Don't like it? Close the page">
+					<img src="resources/blinkies/always.gif" alt="Always under construction">
+					<img src="resources/blinkies/broke.gif" alt="my blinkie broke">
+					<img src="resources/blinkies/popups.gif" alt="I hate pop-ups">
+					<a href="https://www.youtube.com/@VIVINOS" target="_blank"><img src="resources/blinkies/vivinos.gif" alt="Vivinos"></a>
+					<img src="resources/blinkies/sleep.gif" alt="I need sleep">
+					<img src="resources/blinkies/washhands.gif" alt="Wash your damn hands">
+					<img src="resources/blinkies/chud.gif" alt="Fuck my chud life">
+					<img src="resources/blinkies/yipee.gif" alt="Yipee!">
+					<img src="resources/blinkies/V2what.gif" alt="Reconstruct what? There's nothing left!">
+					<img src="resources/blinkies/stillyou.gif" alt="despite everything, it's still you">
+					<img src="resources/blinkies/39miku.gif" alt="Hatsune Miku">
+					<a href="https://deltarune.com/lancer/" target="_blank"><img src="resources/blinkies/lancer.png" alt="lancer"></a>
+				</div>
+				<div class="buttons">
+					<h2>buttons</h2>
+					<!-- <a href="" target="_blank"><img src="resources/buttons/" class="button" alt=""></a> -->
+					<!-- <img src="resources/buttons/xxx.gif" alt="" class="button"> -->
+					<img src="resources/buttons/bestviewed.gif" alt="Best viewed with a computer" class="button">
+					<a href="https://corru.observer" target="_blank"><img src="resources/buttons/corru.gif" alt="Button to corru.observer, a webgame" class="button"></a>
+					<a href="https://v2isdead.com" target="_blank"><img src="https://file.garden/ZRZCFmwU6kvwz15s/buttons/dect2.png" alt="Button to Dream's End Come True, an illustrated dialogue" class="button"></a>
+					<a href="https://dimden.dev" target="_blank"><img src="https://dimden.dev/services/images/88x31.gif" alt="Button to Dimden's Neocities page" class="button"></a>
+					<a href="https://adilene.net" target="_blank"><img src="resources/buttons/virtualdiva.png" alt="Button to Virtual Diva Neocities page" class="button"></a>
+					<img src="resources/buttons/lain.gif" alt="Decorative button with Lain" class="button">
+					<a href="https://fauux.neocities.org" target="_blank"><img src="resources/buttons/fauux.gif" alt="Button to fauux Neocities page" class="button"></a>
+					<a href="https://phrogee.neocities.org" target="_blank"><img src="resources/buttons/phrogee.gif" class="button" alt="Button to Phrogee's Neocities page"></a>
+					<a href="https://kromercoin.neocities.org" target="_blank"><img src="resources/buttons/kromer.gif" class="button" alt="Button to Typhra's Neocities page"></a>
+					<a href="https://feelingmachine.moe/" target="_blank"><img src="resources/buttons/feelingmachine.gif" class="button" alt="Button to Nephro's Neocities page"></a>
+					<img src="resources/buttons/kriswherearewe.png" alt="Kris where the fuck are we" class="button">
+					<iframe src="//incr.easrng.net/badge?key=circuitdoom" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0" class="button"></iframe>
+				</div>
 				<h2>silly goobers</h2>
 				<img src="resources/typhnolmini.png" id="minityphnol" class="mini" alt="Mini Typhnol">
 				<img src="resources/wynmini.png" id="miniwyn" class="mini" alt="Mini Winnie">
@@ -109,6 +150,59 @@
 				<p class="footer">Since 2024-typhnol</p>
 			</footer>
 		</div>
+		<audio id="music" controls loop>
+			<source src="https://file.garden/Zlk30agh4hF11eOU/doodling.mp3" type="audio/mp3">
+		</audio>
+		<script>
+			const music = document.getElementById("music");
+			music.volume = 0.5;
+
+			function setCookie(c_name,value,exdays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+				document.cookie=c_name + "=" + c_value;
+			}
+
+			function getCookie(c_name)
+			{
+				var i,x,y,ARRcookies=document.cookie.split(";");
+				for (i=0;i<ARRcookies.length;i++)
+				{
+				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+				x=x.replace(/^\s+|\s+$/g,"");
+				if (x==c_name)
+					{
+					return unescape(y);
+					}
+				}
+			}
+
+			var song = document.getElementsByTagName('audio')[0];
+			var played = false;
+			var tillPlayed = getCookie('timePlayed');
+			function update()
+			{
+				if(!played){
+					if(tillPlayed){
+					song.currentTime = tillPlayed;
+					song.play();
+					played = true;
+					}
+					else {
+							song.play();
+							played = true;
+					}
+				}
+
+				else {
+				setCookie('timePlayed', song.currentTime);
+				}
+			}
+			setInterval(update,1000);
+		</script>
 		<script>
 			const mewo = document.getElementById("mewo");
 			const spamton = document.getElementById("spamton");
@@ -140,6 +234,7 @@
 				waaaa.play();
 			}
 			function ghostHit(){
+				hit.currentTime = 0;
 				hit.play();
 			}
 			

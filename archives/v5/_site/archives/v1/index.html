@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPHNOL</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="darkreader-lock">
+  </head>
+  <body>
+	<div><a href="/archive.html">> go back?</a></div>
+    <!--SORRY FOR ANY atrocious CODE YOU MAY ENCOUNTER :')-->
+    <div id="pageheader">
+      <div id="title">TYPHNOL</div>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <p class="barheading">NAV</p>
+        <a href="index.html" class="barlink">&gt;HOME</a>
+        <a href="about.html" class="barlink">&gt;ABOUT</a>
+        <a href="art.html" class="barlink">&gt;ART</a>
+        <p class="barheading">UPDATES</p>
+        <div id="updates">
+          <!-- <p class="date-entry">//<br>ABC</p>
+          <br> -->
+          <p class="date-entry">4/29/24<br>I give up. No more typhnol on the front page. Miscellaneous updates to the rest of the pages.</p>
+          <br>
+          <p class="date-entry">4/8/24<br>Modified homepage typhnol design.</p>
+          <br>
+          <p class="date-entry">3/31/24<br>Art page completed. About page updated.</p>
+          <br>
+          <p class="date-entry">2/26/24<br>Changed homepage typhnol design.</p>
+          <br>
+          <p class="date-entry">1/26/24<br>Added mobile layout.</p>
+          <br>
+          <p class="date-entry">1/19/24<br>About page completed? Added couple more stamps and buttons.</p>
+          <br>
+          <p class="date-entry">1/15/24<br>Homepage completed.</p>
+          <br>
+          <p class="date-entry">1/12/24<br>More styling. More content or something??</p>
+          <br>
+          <p class="date-entry">1/8/24<br>Changed to correct year. Adding layout. Added nav to other pages.</p>
+          <br>
+          <p class="date-entry">1/7/24<br>Website creation. Added homepage.</p>
+        </div>
+      </div>
+      <div id="entry">
+        <p class="heading" id="entryhead">WELCOME TO MY GODAWFUL WEBSITE!!!</p>
+        <p class="entrytext">sometimes i do art that i archive here<br>i am an ultrakill and punishing: gray raven addict</p>
+        <img src="arts/meme1.jpg" id="meme">
+      </div>
+    </div>
+    <div id="buttons">
+      <img src="assets/bestview.gif" class="button">
+      <a href="https://neocities.org/"><img src="assets/neocities.gif" class="button"></a>
+      <img src="assets/lain.gif" class="button">
+      <a href="https://v2isdead.com"><img src="https://file.garden/ZRZCFmwU6kvwz15s/buttons/dect.png" class="button"></a>
+      <a href="https://corru.observer/"><img src="assets/corru.gif" class="button"></a>
+    </div>
+    <div id="stamps">
+      <img src="assets/peen.png" class="stamp">
+      <img src="assets/eyes.gif" class="stamp">
+      <img src="assets/gender.png" class="stamp">
+      <img src="assets/forget.gif" class="stamp">
+      <img src="assets/catirl.gif" class="stamp">
+      <img src="assets/getuhhh.png" class="stamp">
+      <img src="assets/baddecisions.png" class="stamp">
+    </div>
+    <div id="whyIsThisHere">(c) 2024 typhnol</div>
+    
+    <script>
+      const d = new Date();
+      var month = d.getMonth() + 1;
+      var day = d.getDate();
+      var year = d.getFullYear(); 
+      for (let m = 0; m < 13; m++) {
+        if (month == 2){
+          document.getElementById("meme").src = "memers/meme2.gif";
+        } else if (month == m){
+          document.getElementById("meme").src = "memers/meme"+m+".jpg";
+        }
+      }
+    </script>
+  </body>
+</html>

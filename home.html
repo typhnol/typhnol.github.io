@@ -8,9 +8,8 @@
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 		<script src="sfx.js" defer></script>
+		<script src="wavy.js" defer></script>
 		<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 		<script>
 			// chattable.initialize({
 			//	stylesheet : "chattable.css",
@@ -29,144 +28,163 @@
 					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
 				</header>
 				<nav>
-					<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
-					<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
-					<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
-					<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
+					<a href="javascript:delay('\home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('\about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('\art.html')" class="navlink lower" id="artlink">Art</a>
+					<a href="javascript:delay('\blog.html')" class="navlink lower" id="bloglink">Blog</a>
+                    <a href="javascript:delay('\entertainment.html')" class="navlink lower" id="funlink">Fun</a>
 				</nav>
 			</div>
 			<section>
 				<div class="container">
 					<img src="resources/silly.gif" class="typhmain" alt="itsa me">
 					<div class="textmain">
-						<h2>what's up?</h2>
+						<h2 class="wavy">what's up?</h2>
 						<p class="lower">I use this for archiving my art and stuff but if you want you can find some of my interests</p>
 					</div>
 				</div>
 				<div class="socials">
-					<a href="ja"></a>
+					<a href="https://www.youtube.com/@typhnol" target="_blank">youtube</a>
+					<a href="https://typhnol.tumblr.com/" target="_blank">tumblr</a>
+					<a href="https://www.instagram.com/typhnol/" target="_blank">instagram</a>
 				</div>
-				<div id="statuscafe"><div id="marquee"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div></div><script src="https://status.cafe/current-status.js?name=typhnol" defer></script>
-				<div class="container2">
-					<div class="sand minigames">
-						<!-- haha i do not know what i am doing! thanks coding train challenges btw -->
-						<h2>sand</h2>
-						<div id="sand">
-							<script src="fallingsand.js"></script>
-						</div>
-					</div>
-					<div class="updates-section">
-						<h2><img class="updatehead" src="resources/update.gif"></h2>
-						<div class="updates">
-							<!-- 
-							<p class="dateEntry">//<br>ABC</p>
-							<br> 
-							-->
-							<p class="dateEntry">7/21/25<br>Minesweeper (sorry, no flag system or win condition yet)</p>
-							<br> 
-							<p class="dateEntry">7/8/25<br>Snake game</p>
-							<br> 
-							<p class="dateEntry">7/1/25<br>Sand simulator</p>
-							<br> 
-							<p class="dateEntry">6/17/25<br>Once again forgot to add this update entry whoopsies! Edited some of the styling in Chattable, made the image on the home page change whenever it's refreshed, and reworked the art page. lots of work done...planning more....</p>
-							<br>
-							<p class="dateEntry">5/26/25<br>I kind of forgot to add this update entry lmao. i made a blog...now my inside thoughts are outside thoughts!!!</p>
-							<br> 
-							<p class="dateEntry">5/7/25<br>Added back some old captions in art. i'll come up with a better system later...maybe with more in depth commentary if anyone bothers to read it</p>
-							<br> 
-							<p class="dateEntry">4/18/25<br>Oh boy another one...minor changes in design here and there. Got rid of stripes. Added a new section in #art where my old layouts are viewable.</p>
-							<br>
-							<p class="dateEntry">3/23/25<br>YEAH!!! Small website design changes.</p>
-							<br>
-							<p class="dateEntry">1/23/25<br>Chattable is now collapsible. Just click the banner.</p>
-							<br>
-							<p class="dateEntry">12/9/24<br>Chattable is no longer discontinued yipee yay! I added it back.</p>
-							<br>
-							<p class="dateEntry">8/30/24<br>Re-did the entire website layout again. Removed visitor count, it was a bit silly-looking.</p>
-							<br>
-							<p class="dateEntry">7/10/24<br>Removed Chattable (<s>it has been discontinued, and I don't plan on using a replacement</s>). Added chibis of me and my friends. Changed red saturation.</p>
-							<br>
-							<p class="dateEntry">6/22/24<br>Changed website design again. A lot simpler this time because i'm too lazy. The old one became hard on my eyes.</p>
-							<br>
-							<p class="dateEntry">6/2/24<br>Added background image.</p>
-							<br>
-							<p class="dateEntry">5/31/24<br>Added some music to homepage.</p>
-							<br>
-							<p class="dateEntry">5/30/24<br>New typhnol design for the something-th time. Small fixes to make the site look nicer.</p>
-							<br>
-							<p class="dateEntry">5/12/24<br>Added chat. Website now mobile compatible.</p>
-							<br>
-							<p class="dateEntry">5/9/24<br>Redesigned entire website. Not mobile compatible yet.</p>
-							<br>
-							<p class="dateEntry">4/29/24<br>No more typhnol on the front page. Miscellaneous updates to the rest of the pages.</p>
-							<br>
-							<p class="dateEntry">4/8/24<br>Modified homepage typhnol design.</p>
-							<br>
-							<p class="dateEntry">3/31/24<br>Art page completed. About page updated.</p>
-							<br>
-							<p class="dateEntry">2/26/24<br>Changed homepage typhnol design.</p>
-							<br>
-							<p class="dateEntry">1/26/24<br>Added mobile layout.</p>
-							<br>
-							<p class="dateEntry">1/19/24<br>About page completed? Added couple more stamps and buttons.</p>
-							<br>
-							<p class="dateEntry">1/15/24<br>Homepage completed.</p>
-							<br>
-							<p class="dateEntry">1/12/24<br>More styling. More content or something??</p>
-							<br>
-							<p class="dateEntry">1/8/24<br>Changed to correct year. Adding layout. Added nav to other pages.</p>
-							<br>
-							<p class="dateEntry">1/7/24<br>Website creation. Added homepage.</p>
-						</div>
-					</div>
-					<div class="snake minigames">
-						<h2>snake</h2>
-						<div id="snake">
-							<script src="snake.js"></script>
-						</div>
-					</div>
-					<div class="minesweeper minigames">
-						<h2>minesweeper (no flag system or win condition)</h2>
-						<div id="minesweeper">
-							<script src="minesweeper.js"></script>
-						</div>
-					</div>
-					<div class="motm-section">
-						<h2>hello</h2>
-						<img id="motm" alt="media of the month" src="">
+				<div id="statuscafe">
+					<div id="statuscafe-username"></div>
+					<div id="statuscafe-content"></div>
+				</div>
+				<script src="https://status.cafe/current-status.js?name=typhnol" defer></script>
+				<div class="updates-section">
+					<h2><img class="updatehead" src="resources/update.gif"></h2>
+					<div class="updates">
+						<!-- 
+						<p class="dateEntry">//<br>ABC</p>
+						<br> 
+						-->
+						<p class="dateEntry">3/22/26<br>some relatively significant changes to the website. chattable will be down indefinitely, don't have any satisfactory replacements at the moment. moved p5js projects to a different page. added blinkies and buttons back. added social media links.</p>
+						<br> 
+						<p class="dateEntry">7/21/25<br>Minesweeper (sorry, no flag system or win condition yet)</p>
+						<br> 
+						<p class="dateEntry">7/8/25<br>Snake game</p>
+						<br> 
+						<p class="dateEntry">7/1/25<br>Sand simulator</p>
+						<br> 
+						<p class="dateEntry">6/17/25<br>Once again forgot to add this update entry whoopsies! Edited some of the styling in Chattable, made the image on the home page change whenever it's refreshed, and reworked the art page. lots of work done...planning more....</p>
+						<br>
+						<p class="dateEntry">5/26/25<br>I kind of forgot to add this update entry lmao. i made a blog...now my inside thoughts are outside thoughts!!!</p>
+						<br> 
+						<p class="dateEntry">5/7/25<br>Added back some old captions in art. i'll come up with a better system later...maybe with more in depth commentary if anyone bothers to read it</p>
+						<br> 
+						<p class="dateEntry">4/18/25<br>Oh boy another one...minor changes in design here and there. Got rid of stripes. Added a new section in #art where my old layouts are viewable.</p>
+						<br>
+						<p class="dateEntry">3/23/25<br>YEAH!!! Small website design changes.</p>
+						<br>
+						<p class="dateEntry">1/23/25<br>Chattable is now collapsible. Just click the banner.</p>
+						<br>
+						<p class="dateEntry">12/9/24<br>Chattable is no longer discontinued yipee yay! I added it back.</p>
+						<br>
+						<p class="dateEntry">8/30/24<br>Re-did the entire website layout again. Removed visitor count, it was a bit silly-looking.</p>
+						<br>
+						<p class="dateEntry">7/10/24<br>Removed Chattable (<s>it has been discontinued, and I don't plan on using a replacement</s>). Added chibis of me and my friends. Changed red saturation.</p>
+						<br>
+						<p class="dateEntry">6/22/24<br>Changed website design again. A lot simpler this time because i'm too lazy. The old one became hard on my eyes.</p>
+						<br>
+						<p class="dateEntry">6/2/24<br>Added background image.</p>
+						<br>
+						<p class="dateEntry">5/31/24<br>Added some music to homepage.</p>
+						<br>
+						<p class="dateEntry">5/30/24<br>New typhnol design for the something-th time. Small fixes to make the site look nicer.</p>
+						<br>
+						<p class="dateEntry">5/12/24<br>Added chat. Website now mobile compatible.</p>
+						<br>
+						<p class="dateEntry">5/9/24<br>Redesigned entire website. Not mobile compatible yet.</p>
+						<br>
+						<p class="dateEntry">4/29/24<br>No more typhnol on the front page. Miscellaneous updates to the rest of the pages.</p>
+						<br>
+						<p class="dateEntry">4/8/24<br>Modified homepage typhnol design.</p>
+						<br>
+						<p class="dateEntry">3/31/24<br>Art page completed. About page updated.</p>
+						<br>
+						<p class="dateEntry">2/26/24<br>Changed homepage typhnol design.</p>
+						<br>
+						<p class="dateEntry">1/26/24<br>Added mobile layout.</p>
+						<br>
+						<p class="dateEntry">1/19/24<br>About page completed? Added couple more stamps and buttons.</p>
+						<br>
+						<p class="dateEntry">1/15/24<br>Homepage completed.</p>
+						<br>
+						<p class="dateEntry">1/12/24<br>More styling. More content or something??</p>
+						<br>
+						<p class="dateEntry">1/8/24<br>Changed to correct year. Adding layout. Added nav to other pages.</p>
+						<br>
+						<p class="dateEntry">1/7/24<br>Website creation. Added homepage.</p>
 					</div>
 				</div>
-					
 			</section>
 			<footer>
+				<script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=39699505&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=39699505&main=1" /></noscript>
 				<p class="footer">Since 2024-typhnol</p>
-				<a href="/fkdw.html" class="footer" id="forAster">iru dvwhu</a>
+				<!-- <a href="/fkdw.html" class="footer" id="forAster">iru dvwhu</a> -->
 			</footer>
 		</div>
+		<audio id="music" controls loop>
+			<source src="https://file.garden/Zlk30agh4hF11eOU/doodling.mp3" type="audio/mp3">
+		</audio>
+		<script>
+			// thank you stackoverflow... there is still a slight delay due to page loading times but it'll have to do
+			const music = document.getElementById("music");
+			music.volume = 0.5;
+
+			function setCookie(c_name,value,exdays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+				document.cookie=c_name + "=" + c_value;
+			}
+
+			function getCookie(c_name)
+			{
+				var i,x,y,ARRcookies=document.cookie.split(";");
+				for (i=0;i<ARRcookies.length;i++)
+				{
+				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+				x=x.replace(/^\s+|\s+$/g,"");
+				if (x==c_name)
+					{
+					return unescape(y);
+					}
+				}
+			}
+
+			var song = document.getElementsByTagName('audio')[0];
+			var played = false;
+			var tillPlayed = getCookie('timePlayed');
+			function update()
+			{
+				if(!played){
+					if(tillPlayed){
+					song.currentTime = tillPlayed;
+					song.play();
+					played = true;
+					}
+					else {
+							song.play();
+							played = true;
+					}
+				}
+
+				else {
+				setCookie('timePlayed', song.currentTime);
+				}
+			}
+			setInterval(update, 100);
+		</script>
 		<!-- <div id="chat">
 			<div id="chatbanner" class="chatbanner"><p id="bannerlabel">Chat</p></div>
 			<iframe src='https://beta.iframe.chat/embed?chat=79970941' id='chattable' class="chattable"></iframe>
 		</div> -->
-		<script>
-			window.addEventListener("keydown", function(e) {
-				if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-					e.preventDefault();
-				}
-			}, false);
-			function getRandomInt(min, max) {
-				min = Math.ceil(min);
-				max = Math.floor(max);
-				return Math.floor(Math.random() * (max - min)) + min;
-			}
-			n = getRandomInt(1,24);
-			if (n==2||n==3||n==12||n==13){
-				document.getElementById("motm").src = "resources/randimg/"+n+".gif";
-			} else if (n==8||n==10){
-				document.getElementById("motm").src = "resources/randimg/"+n+".png";
-			} else {
-				document.getElementById("motm").src = "resources/randimg/"+n+".jpg";
-			}
-			
+		<!-- <script>
 			var chatBanner = document.getElementById("chatbanner");
 			var chatBox = document.getElementById("chattable");
 			var indicator = document.getElementById("bannerlabel");
@@ -196,6 +214,6 @@
 				localStorage.setItem("lastToggle", isOpened.toString());
 			}
 			chatBanner.addEventListener("click", toggleDisplay); 
-		</script>
+		</script> -->
 	</body>
 </html>

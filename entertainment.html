@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>TYPHNOL</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<meta name="darkreader-lock">
+		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+		<script src="sfx.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
+		<script>
+			function delay (URL) {
+				setTimeout( function() { window.location = URL }, 200 );
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wholething">
+			<div class="titlenav">
+				<header>
+					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
+				</header>
+				<nav>
+					<a href="javascript:delay('\home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('\about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('\art.html')" class="navlink lower" id="artlink">Art</a>
+					<a href="javascript:delay('\blog.html')" class="navlink lower" id="bloglink">Blog</a>
+                    <a href="javascript:delay('\entertainment.html')" class="navlink lower" id="bloglink">Fun</a>
+				</nav>
+			</div>
+			<section>
+				<div class="container2">
+                    <!-- haha i do not know what i am doing! thanks coding train challenges btw -->
+					<div class="sand minigames">
+						<h2>sand</h2>
+						<div id="sand">
+							<script src="fallingsand.js"></script>
+						</div>
+					</div>
+					<div class="snake minigames">
+						<h2>snake</h2>
+						<div id="snake">
+							<script src="snake.js"></script>
+						</div>
+					</div>
+					<div class="minesweeper minigames">
+						<h2>minesweeper (practically unplayable)</h2>
+						<div id="minesweeper">
+							<script src="minesweeper.js"></script>
+						</div>
+					</div>
+					<div class="motm-section">
+						<h2>refresh the page</h2>
+						<img id="motm" alt="media of the month" src="">
+					</div>
+				</div>
+			</section>
+			<footer>
+				<p class="footer">Since 2024-typhnol</p>
+			</footer>
+			<audio id="music" controls loop>
+				<source src="https://file.garden/Zlk30agh4hF11eOU/doodling.mp3" type="audio/mp3">
+			</audio>
+			<script>
+				// thank you stackoverflow... there is still a slight delay due to page loading times but it'll have to do
+				const music = document.getElementById("music");
+				music.volume = 0.5;
+
+				function setCookie(c_name,value,exdays)
+				{
+					var exdate=new Date();
+					exdate.setDate(exdate.getDate() + exdays);
+					var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+					document.cookie=c_name + "=" + c_value;
+				}
+
+				function getCookie(c_name)
+				{
+					var i,x,y,ARRcookies=document.cookie.split(";");
+					for (i=0;i<ARRcookies.length;i++)
+					{
+					x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+					y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+					x=x.replace(/^\s+|\s+$/g,"");
+					if (x==c_name)
+						{
+						return unescape(y);
+						}
+					}
+				}
+
+				var song = document.getElementsByTagName('audio')[0];
+				var played = false;
+				var tillPlayed = getCookie('timePlayed');
+				function update()
+				{
+					if(!played){
+						if(tillPlayed){
+						song.currentTime = tillPlayed;
+						song.play();
+						played = true;
+						}
+						else {
+								song.play();
+								played = true;
+						}
+					}
+
+					else {
+					setCookie('timePlayed', song.currentTime);
+					}
+				}
+				setInterval(update, 100);
+			</script>
+		</div>
+        <script>
+            window.addEventListener("keydown", function(e) {
+				if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+					e.preventDefault();
+				}
+			}, false);
+			function getRandomInt(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+			n = getRandomInt(1,24);
+			if (n==2||n==3||n==12||n==13){
+				document.getElementById("motm").src = "resources/randimg/"+n+".gif";
+			} else if (n==8||n==10){
+				document.getElementById("motm").src = "resources/randimg/"+n+".png";
+			} else {
+				document.getElementById("motm").src = "resources/randimg/"+n+".jpg";
+			}
+        </script>
+	</body>
+</html>

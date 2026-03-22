@@ -1,0 +1,351 @@
+@font-face {
+  font-family: VCR_OSD;
+  src: url(assets/VCR_OSD_MONO.woff2);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+body{
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: black;
+  overflow: auto;
+}
+p{
+  margin: 0;
+}
+.heading{
+  font-family: VCR_OSD; 
+  font-size: 31px;
+}
+#pageheader {
+  font-family: VCR_OSD;
+  border: 1px solid black;
+  background-color: black;
+}
+#title {
+  width: fit-content;
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 45px;
+  text-align: center;
+  color: white 
+}
+.container{
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+  width: 980px;
+  background: url("assets/texture.gif") fixed;
+  background-size: 1000px 760px;
+}
+.sidebar {
+  grid-column: 1 / 2;
+  padding: 0px 20px 20px 20px;
+  background-color: black;
+}
+#entry {
+  padding: 20px;
+  grid-column: 2 / 3;
+  background-color: black;
+}
+#meme {
+  width: 80%;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+  margin: 50px auto;
+}
+.entrytext{
+  font-size: 18px;
+  margin: 10px 0px;
+  padding: 10px 0px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+table{
+  text-align: left;
+  width: 100%;
+}
+th, td {
+  padding: 5px;
+}
+td {
+  vertical-align: top;
+}
+td>span:nth-child(odd){
+  color: #ff1414;
+}
+#entryhead{
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.barheading {
+  font-size: 30px;
+  margin: 20px 0px;
+  padding: 5px 0px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+.barlink:link{
+  color: white;
+  text-decoration: none;
+  margin: 2px;
+  display: block;
+  width: 80px;
+}
+.barlink:visited {
+  color: #ffc629;
+}
+.barlink:hover {
+  color: red;
+}
+#updates {
+  padding: 10px;
+  overflow: auto;
+  max-height: 340px;
+  border: 2px solid white;
+}
+.date-entry {
+  font-family: VCR_OSD;
+  text-transform: uppercase;
+}
+#buttons{
+  display: block;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+}
+#stamps{
+  display: block;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+}
+.blinkies {
+  margin: 5px auto;
+  padding: 10px 0px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+.blinkie {
+  margin: 1px auto;
+}
+#whyIsThisHere {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.space {
+  padding: 30px 0px;
+}
+.artimg {
+  width: 500px;
+  margin: 10px;
+}
+.artimgomo, #fungang {
+  width: 600px;
+  margin: 10px;
+}
+
+/* this media query is a really bad idea */
+@media only screen and (max-width: 1050px) {
+  body{
+    font-size: 1.6vw;
+  }
+  #title {
+    font-size: 4.286vw; 
+    margin: 1.905vw auto;
+    padding: 0.476vw;
+  }
+  .container{
+    width: 80%;
+    gap: 1.905vw;
+    padding: 1.905vw;
+  }
+  .heading {
+    font-size: 2.6vw; 
+  }
+  .sidebar {
+    padding: 0px 1.905vw 1.905vw 1.905vw;
+  }
+  #entry {
+    padding: 1.905vw;
+  }
+  #meme {
+    width: 80%;
+    max-height: 33vw;
+    object-fit: contain;
+    display: block;
+    margin: 4.762vw auto;
+  }
+  .entrytext{
+    font-size: 1.8vw;
+    margin: 0.952vw 0px;
+    padding: 0.952vw 0px;
+  }
+  .barheading {
+    font-size: 2.857vw;
+    margin: 1.905vw 0px;
+    padding: 0.476vw 0px;
+  }
+  .barlink:link{
+    margin: 0.190vw;
+  }
+  #updates {
+    padding: 0.952vw;
+    height: 28.571vw;
+  }
+  #buttons{
+    width: 80%;
+  }
+  .button {
+    width: 16%;
+  }
+  .stamp {
+    width: 18%;
+  }
+  .blinkie {
+    width: 31.4%;
+    margin: 0.238vw;
+  }
+  .blinkies {
+    padding: 0.476vw 0px;
+    margin: 0.476vw auto;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+  .artimg {
+    width: 47.619vw;
+    margin: 0.952vw;
+  }
+  .artimgomo, #fungang {
+    width: 57.143vw;
+    margin: 0.952vw;
+  }
+}
+
+/*this one was a slightly better idea*/
+@media only screen and (max-width: 700px) {
+  #title {
+    font-size: 40px; 
+    margin: 10px auto;
+    padding: 5px;
+  }
+  .container{
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    width: 90%;
+    gap: 10px;
+    padding: 10px;
+  }
+  .sidebar {
+    padding: 1.905vw;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .barheading {
+    padding: 0.5vw;
+    text-align: center;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    font-size: 28px;
+  }
+  .barheading:nth-of-type(1){
+    display: none;
+  }
+  .barheading:nth-of-type(2){
+    grid-row: 2/3;
+    grid-column: 1/6;
+  }
+  .barlink:link{
+    width: auto;
+    padding: 1px 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .barlink:nth-of-type(1){
+    grid-column: 2/3;
+  }
+  .barlink:nth-of-type(2){
+    grid-column: 3/4;
+  }
+  .barlink:nth-of-type(3){
+    grid-column: 4/5;
+  }
+  .barlink:nth-of-type(4){
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+  .bartext{
+    font-size: 18px;
+    text-align: center;
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+  #updates{
+    grid-row: 3/4;
+    grid-column: 1/6;
+    height: 50px;
+    margin: 5px;
+  }
+  .date-entry{
+    font-size: 15px;
+  }
+  #entry {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding: 10px;
+  }
+  .heading {
+    font-size: 30px;
+    padding: 5px;
+    margin: 0;
+  }
+  .entrytext{
+    font-size: 18px;
+    margin: 5px auto;
+    padding: 10px 5px;
+  }
+  .blinkies {
+    margin: 5px auto;
+    padding: 5px 0px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+  .blinkie {
+    width: 46%;
+    margin: 5px;
+  }
+  #buttons {
+    width: 95%;
+  }
+  #stamps {
+    width: 95%;
+  }
+  #whyIsThisHere {
+    font-size: 15px;
+  }
+  .artimg {
+    width: 95%;
+    margin: 10px;
+  }
+  .artimgomo, #fungang {
+    width: 95%;
+    margin: 10px;
+  }
+}

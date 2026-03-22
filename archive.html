@@ -21,14 +21,15 @@
 					<h1><img class="title" src="resources/title.gif" alt="Typhnol"></h1>
 				</header>
 				<nav>
-					<a href="javascript:delay('/home.html')" class="navlink lower" id="homelink">Home</a>
-					<a href="javascript:delay('/about.html')" class="navlink lower" id="aboutlink">About</a>
-					<a href="javascript:delay('/art.html')" class="navlink lower" id="artlink">Art</a>
-					<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
+					<a href="javascript:delay('\home.html')" class="navlink lower" id="homelink">Home</a>
+					<a href="javascript:delay('\about.html')" class="navlink lower" id="aboutlink">About</a>
+					<a href="javascript:delay('\art.html')" class="navlink lower" id="artlink">Art</a>
+					<a href="javascript:delay('\blog.html')" class="navlink lower" id="bloglink">Blog</a>
+                    <a href="javascript:delay('\entertainment.html')" class="navlink lower" id="funlink">Fun</a>
 					<br><br>
-					<a href="javascript:delay('/omotober.html')" class="navlink lower" id="omolink">>Omotober&nbsp;2022</a>
+					<a href="javascript:delay('\omotober.html')" class="navlink lower" id="omolink">&gt;&nbsp;Omotober&nbsp;2022</a>
 					<br>
-					<a href="javascript:delay('/archive.html')" class="navlink lower" id="archivelink">>Old&nbsp;layouts</a>
+					<a href="javascript:delay('\archive.html')" class="navlink lower" id="archivelink">&gt;&nbsp;Old&nbsp;layouts</a>
 				</nav>
 			</div>
 			<section>
@@ -42,10 +43,65 @@
 				<a href="archives\v4\index.html">layout V4</a>
 				<br>
 				<a href="archives\v4.5\index.html">layout V4.5</a>
+				<br>
+				<a href="archives\v5\index.html">layout V5</a>
 			</section>
 			<footer>
 				<p class="footer">Since 2024-typhnol</p>
 			</footer>
 		</div>
+		<audio id="music" controls loop>
+			<source src="https://file.garden/Zlk30agh4hF11eOU/doodling.mp3" type="audio/mp3">
+		</audio>
+		<script>
+			const music = document.getElementById("music");
+			music.volume = 0.5;
+
+			function setCookie(c_name,value,exdays)
+			{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + exdays);
+				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+				document.cookie=c_name + "=" + c_value;
+			}
+
+			function getCookie(c_name)
+			{
+				var i,x,y,ARRcookies=document.cookie.split(";");
+				for (i=0;i<ARRcookies.length;i++)
+				{
+				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+				x=x.replace(/^\s+|\s+$/g,"");
+				if (x==c_name)
+					{
+					return unescape(y);
+					}
+				}
+			}
+
+			var song = document.getElementsByTagName('audio')[0];
+			var played = false;
+			var tillPlayed = getCookie('timePlayed');
+			function update()
+			{
+				if(!played){
+					if(tillPlayed){
+					song.currentTime = tillPlayed;
+					song.play();
+					played = true;
+					}
+					else {
+							song.play();
+							played = true;
+					}
+				}
+
+				else {
+				setCookie('timePlayed', song.currentTime);
+				}
+			}
+			setInterval(update,1000);
+		</script>
 	</body>
 </html>

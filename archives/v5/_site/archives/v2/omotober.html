@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMOTOBER 2022</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta name="darkreader-lock">
+</head>
+
+<body id="omotoberBody">
+  <div class="raincontainer" id="rainContainer">
+
+  </div>
+  <header>
+    <h1 class="upper">Typhnol</h1>
+  </header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="upper navlink">> Home</a>
+      <a href="about.html" class="upper navlink">> About Me</a>
+      <a href="art.html" class="upper navlink">> Art</a>
+      <a href="omotober.html" class="upper navlink">> Omotober 2022</a>
+    </nav>
+    <section id="section1">
+      <h2 class="upper">Omotober 2022 (discontinued)</h2>
+      <p>Day 1 to 7</p>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo1.jpg" target="_blank">
+        <img src="arts/omotober/omo1.jpg" class="artimg" alt="Omotober day 1">
+      </a>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo2.jpg" target="_blank">
+        <img src="arts/omotober/omo2.jpg" class="artimg" alt="Omotober day 2">
+      </a>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo3.jpg" target="_blank">
+        <img src="arts/omotober/omo3.jpg" class="artimg" alt="Omotober day 3">
+      </a>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo4.jpg" target="_blank">
+        <img src="arts/omotober/omo4.jpg" class="artimg" alt="Omotober day 4">
+      </a>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo5.jpg" target="_blank">
+        <img src="arts/omotober/omo5.jpg" class="artimg" alt="Omotober day 5">
+      </a>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo6.jpg" target="_blank">
+        <img src="arts/omotober/omo6.jpg" class="artimg" alt="Omotober day 6">
+      </a>
+      <a href="https://circuitdoom.neocities.org/arts/omotober/omo7.jpg" target="_blank">
+        <img src="arts/omotober/omo7.jpg" class="artimg" alt="Omotober day 7">
+      </a>
+    </section>
+    <section id="section2">
+      <img src="resources/typhnol.png" alt="typhnol" id="typhnol">
+      <div id="checkboxes">
+		<input type="checkbox" id="rainToggle" onclick="rainToggler()">
+		<label for="rainToggle">Disable rain</label>
+	  </div>
+    </section>
+  </div>
+  <script>
+    var rainToggle = document.getElementById("rainToggle");
+    var rainContainer = document.getElementById("rainContainer");
+
+    function rainToggler() {
+      if (rainToggle.checked) {
+        localStorage.setItem('rainToggle', 1);
+        rainContainer.setAttribute('data-hidden', 'true');
+      } else {
+        localStorage.setItem('rainToggle', 0);
+        rainContainer.removeAttribute('data-hidden');
+      }
+    }
+
+    if (localStorage.getItem('rainToggle') === '1') {
+      rainToggle.checked = true;
+      rainContainer.setAttribute('data-hidden', 'true');
+    } else {
+      rainToggle.checked = false;
+      rainContainer.removeAttribute('data-hidden');
+    }
+
+    rainToggler();
+    
+    const rain = [];
+    var index = 0;
+
+    function createRain() {
+      rain[index] = document.createElement("div");
+      var randomLeft = Math.random() * 100;
+      rain[index].id = "drop";
+      rain[index].style.left = randomLeft + "%";
+      document.querySelector(".raincontainer").appendChild(rain[index]);
+      setTimeout((index)=>{destroyRain(index)}, 840, index);
+      index += 1;
+    }
+
+    function destroyRain(i) {
+      rain[i].remove();
+    }
+
+    setInterval(createRain, 15);
+  </script>
+</body>
+
+</html>

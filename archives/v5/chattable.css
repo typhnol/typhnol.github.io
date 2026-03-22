@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@font-face{
+	font-family:VCR_OSD;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/VCR_OSD_MONO.woff2);
+}
+@font-face{
+	font-family:RWFont;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/rain-world-menu.woff2);
+}
+body {
+	font-family:"Kode Mono", monospace;
+}
+#top_banner {
+	display:none;
+}
+#background {
+	background-color:black;
+	height: calc(100% - 30px);
+}
+.allMessages {
+	border-top:1px solid #222222;
+}
+.msgBody {
+	color:white;
+}
+.senderInfo {
+	color:#ff1a3c;
+	font-family:RWFont;
+	font-size:15px;
+}
+#scrollToBottom {
+	border: 1px solid white;
+	background-color: black;
+	opacity: 0.5;
+}
+.pinned{
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background-color: black;
+	border: 1px solid #222222;
+}
+.pinned:hover {
+	opacity: 0.3;
+}
+#replyBanner{
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+}
+#loadMore {
+	color:white;
+}
+#timestamp {
+	display: none;
+}
+#settings {
+	background-image:none;
+	color:white;
+	border-radius: 5px;
+	border: 1px solid white;
+	width: 60px;
+	padding: 0px 2px;
+	background-color: black;
+}
+#settings:after {
+  position:absolute;
+  right:5px;
+  top:0;
+  content:"settings";
+  color:white;
+  font-size:11px;
+}
+.owner::before {
+	content: "◉";
+	padding: 0px 3px 2px 0px;
+}
+.owner{
+	display: contents;
+}
+#settingsWindow {
+	background-color: black;
+}
+#settingsMenu{
+	color: white;
+}
+#loginBanner {
+	transition: none;
+}
+.highlight{
+	background-color:#ff1a3c;
+}
+#emojiTray {
+	color:white;
+	background-color:black;
+}
+#emojiTrayToggle{
+	background-image:url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emoji.png);
+}
+.emojiInGrid{
+	height: 25pt;
+}
+#is_typing > span{
+	background-color:white;
+}
+#is_typing {
+	background-color:transparent;
+}
+#input {
+	border-radius:0;
+	background-color:black;
+	border-top:1px solid grey;
+	font-size: 12px;
+	color: white;
+	font-family:"Kode Mono", monospace;
+}
+#input:empty::before{
+	color:grey;
+	font-family:"Kode Mono", monospace;
+}
+#save, #name {
+	font-family:"Kode Mono", monospace;
+}
+#name{
+	font-size: 12px;
+}
+a {
+	color:#ff1a3c;
+}
+#closeSettingsBtn{
+	background-color:#ff1a3c;
+}
+input[type="checkbox"] + label::after{
+	color:#ff1a3c;
+}
