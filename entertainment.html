@@ -28,7 +28,7 @@
 					<a href="javascript:delay('\about.html')" class="navlink lower" id="aboutlink">About</a>
 					<a href="javascript:delay('\art.html')" class="navlink lower" id="artlink">Art</a>
 					<a href="javascript:delay('/blog.html')" class="navlink lower" id="bloglink">Blog</a>
-                    <a href="javascript:delay('\entertainment.html')" class="navlink lower" id="bloglink">Fun</a>
+                    <a href="javascript:delay('\entertainment.html')" class="navlink lower" id="funlink">Fun</a>
 				</nav>
 			</div>
 			<section>
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 					<div class="motm-section">
-						<h2>refresh the page</h2>
+						<h2>click the image</h2>
 						<img id="motm" alt="media of the month" src="">
 					</div>
 				</div>
@@ -97,14 +97,23 @@
 				max = Math.floor(max);
 				return Math.floor(Math.random() * (max - min)) + min;
 			}
-			n = getRandomInt(1,24);
-			if (n==2||n==3||n==12||n==13){
-				document.getElementById("motm").src = "resources/randimg/"+n+".gif";
-			} else if (n==8||n==10){
-				document.getElementById("motm").src = "resources/randimg/"+n+".png";
-			} else {
-				document.getElementById("motm").src = "resources/randimg/"+n+".jpg";
+
+			meme = document.getElementById("motm");
+
+			function changeImg() {
+				n = getRandomInt(1,24);
+				if (n==2||n==3||n==12||n==13){
+					meme.src = "resources/randimg/"+n+".gif";
+				} else if (n==8||n==10){
+					meme.src = "resources/randimg/"+n+".png";
+				} else {
+					meme.src = "resources/randimg/"+n+".jpg";
+				}
 			}
+			
+			changeImg();
+
+			meme.addEventListener("click", changeImg);
         </script>
 	</body>
 </html>
