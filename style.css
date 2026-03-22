@@ -550,6 +550,7 @@ li span{
 	text-align:left;
 	border-top: solid 1px white;
 	border-bottom: solid 1px white;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .bloglistitem a, .bloglistitem span{
 	display:inline-block;
@@ -592,7 +593,7 @@ li span{
 #splash{
 	text-align:center;
 	position:absolute;
-	width:450px;
+	width:350px;
 	height:350px;
 	padding:10px 20px;
 	top:0px;
