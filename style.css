@@ -442,6 +442,13 @@ li span{
 	margin-left: auto;
 	margin-right: auto;
 }
+#copyBtn{
+	background-color: #000000;
+	color: white;
+	min-height: 31px;
+	max-height: 150px;
+	resize: vertical;
+}
 .mini{
 	width:100px;
 	position:relative;
