@@ -546,9 +546,8 @@ li span{
 	left: 0;
 }
 .bloglistcontainer {
-	min-width: 300px;
-	width: 60%;
-	margin: auto; 
+	margin: 10px auto;
+  	max-width: 1000px;
 }
 .bloglist {
 	margin:auto;
@@ -563,9 +562,14 @@ li span{
 	display:inline-block;
 }
 .blogpost {
-	margin: 0px 15%;
+	margin: 0px auto;
 	padding: 30px;
 	background-color: rgba(0, 0, 0, 0.8);
+	max-width: 1000px;
+	text-align: left;
+}
+.blogpost > h1 {
+	text-align: center;
 }
 .blogpost img {
 	max-width: 100%;
