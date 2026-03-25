@@ -7,8 +7,7 @@
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
-		<script src="sfx.js" defer></script>
-		<script src="banners.js" defer></script>
+		<script src="mainfunctions.js" defer></script>
 		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/addons/p5.sound.min.js"></script>
 		<script>
@@ -37,19 +36,19 @@
 					<div class="sand minigames">
 						<h2>sand</h2>
 						<div id="sand">
-							<script src="fallingsand.js"></script>
+							<script src="fun/fallingsand.js"></script>
 						</div>
 					</div>
 					<div class="snake minigames">
 						<h2>snake</h2>
 						<div id="snake">
-							<script src="snake.js"></script>
+							<script src="fun/snake.js"></script>
 						</div>
 					</div>
 					<div class="minesweeper minigames">
 						<h2>minesweeper (practically unplayable)</h2>
 						<div id="minesweeper">
-							<script src="minesweeper.js"></script>
+							<script src="fun/minesweeper.js"></script>
 						</div>
 					</div>
 					<div class="motm-section">
@@ -63,25 +62,6 @@
 			</footer>
 			
 		</div>
-		<button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
-		<script>
-			let mybutton = document.getElementById("topBtn");
-
-			window.onscroll = function() {scrollFunction()};
-
-			function scrollFunction() {
-				if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-					mybutton.style.display = "block";
-				} else {
-					mybutton.style.display = "none";
-				}
-			}
-
-			function topFunction() {
-				document.body.scrollTop = 0;
-				document.documentElement.scrollTop = 0;
-			} 
-		</script>
 		<div>
 			<div id="playbanner" class="playbanner"><p id="playbannerlabel">&gt;</p></div>
 			<iframe id="playerframe" class="playerframe" src="player.html"></iframe>

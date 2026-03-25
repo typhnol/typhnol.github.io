@@ -114,7 +114,6 @@ h3{
 	font-size: 15px;
 	font-family: DTF;
 }
-
 #topBtn:hover {
 	color: #ff1a3c;
 }
@@ -144,6 +143,9 @@ h3{
 	transform: translate(-50%, -50%);
 	font-size: 15px;
 	text-align: center;
+}
+.sparkle {
+	pointer-events: none;
 }
 .chattable {
 	position:fixed;
@@ -202,7 +204,6 @@ a:hover {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 .typhmain{
-	image-rendering: pixelated;
 	width:150px;
 }
 .textmain{
@@ -392,6 +393,9 @@ footer{
 	grid-template-columns:80px auto;
 	grid-template-rows: auto;
 	align-items:center;
+}
+#albumcover {
+	image-rendering: pixelated;
 }
 #details{
 	margin:0px 20px;
