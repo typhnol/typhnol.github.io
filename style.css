@@ -353,6 +353,7 @@ a:hover {
 .rainbow{
   background-image: repeating-linear-gradient(90deg, #ff4d6d, #ffa62b, #ffd93d, #6bcB77, #4d96ff, #a95eff, #ff4d6d);
   background-size: 200% 200%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 24px;
