@@ -7,16 +7,12 @@
 		<link href="/style.css" rel="stylesheet" type="text/css">
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
-		<script src="/sfx.js" defer></script>
+		<script src="mainfunctions.js" defer></script>
 		<script>
-			chattable.initialize({
-				stylesheet : "chattable.css",
-			});
-			
 			function delay (URL) {
 				setTimeout( function() { window.location = URL }, 200 );
 			}
-		</script>	
+		</script>
 	</head>
 	<body>
 		<!-- welcome to my land of shit code -->
@@ -42,59 +38,9 @@
 				<p class="footer">Since 2024-typhnol</p>
 			</footer>
 		</div>
-		<audio id="music" controls loop>
-			<source src="https://file.garden/Zlk30agh4hF11eOU/doodling.mp3" type="audio/mp3">
-		</audio>
-		<script>
-			// thank you stackoverflow... there is still a slight delay due to page loading times but it'll have to do
-			const music = document.getElementById("music");
-			music.volume = 0.5;
-
-			function setCookie(c_name,value,exdays)
-			{
-				var exdate=new Date();
-				exdate.setDate(exdate.getDate() + exdays);
-				var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-				document.cookie=c_name + "=" + c_value;
-			}
-
-			function getCookie(c_name)
-			{
-				var i,x,y,ARRcookies=document.cookie.split(";");
-				for (i=0;i<ARRcookies.length;i++)
-				{
-				x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-				y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-				x=x.replace(/^\s+|\s+$/g,"");
-				if (x==c_name)
-					{
-					return unescape(y);
-					}
-				}
-			}
-
-			var song = document.getElementsByTagName('audio')[0];
-			var played = false;
-			var tillPlayed = getCookie('timePlayed');
-			function update()
-			{
-				if(!played){
-					if(tillPlayed){
-					song.currentTime = tillPlayed;
-					song.play();
-					played = true;
-					}
-					else {
-							song.play();
-							played = true;
-					}
-				}
-
-				else {
-				setCookie('timePlayed', song.currentTime);
-				}
-			}
-			setInterval(update, 500);
-		</script>
+		<div>
+			<div id="playbanner" class="playbanner"><p id="playbannerlabel">&gt;</p></div>
+			<iframe id="playerframe" class="playerframe" src="player.html"></iframe>
+		</div>
 	</body>
 </html>

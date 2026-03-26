@@ -1,5 +1,6 @@
 title: typhnol's yaps
 description: typhnol's blog aka yapping
 author: typhnol
+baseurl: https://typhnol.github.io
 plugins:
   - jekyll-feed
