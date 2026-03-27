@@ -94,15 +94,6 @@ h3{
 a:hover {
 	text-decoration: none;
 }
-::-moz-selection { 
-  color: white;
-  background: #ff1a3c7e;
-}
-
-::selection {
-  color: white;
-  background: #ff1a3c7e;
-}
 #topBtn {
 	display: none;
 	position: fixed;
