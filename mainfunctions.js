@@ -1,8 +1,8 @@
-//WAVY TEXT STYLE
+//TEXT SEPARATOR
 
-const wavyElements = document.querySelectorAll('.wavy');
+const textElements = document.querySelectorAll('.animateText');
 
-wavyElements.forEach(element => {
+textElements.forEach(element => {
   const originalHTML = element.innerHTML;
   let newHTML = '';
 
