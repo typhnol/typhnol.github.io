@@ -208,11 +208,11 @@
                 break;
             case 'setPlaylist':
                 if (Array.isArray(cmd.playlist)) {
-                playlist.length = 0;
-                playlist.push(...cmd.playlist);
-                currentTrackIndex = 0;
-                loadTrack(0);
-                play();
+                    playlist.length = 0;
+                    playlist.push(...cmd.playlist);
+                    currentTrackIndex = 0;
+                    loadTrack(0);
+                    play();
                 }
                 break;
             case 'getStatus':

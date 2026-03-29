@@ -440,9 +440,11 @@ li span{
 }
 .listcontainer{
 	display:flex;
+	flex-wrap: wrap;
 	justify-content:center;
 }
 .listcontainer div{
+	min-width: 350px;
 	width:30%;
 }
 .listcontainer h2{
@@ -463,6 +465,9 @@ li span{
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+}
+.plushies > *{
+	font-size: 15px;
 }
 #copyBtn{
 	background-color: #000000;
@@ -695,6 +700,9 @@ li span{
 	}
 	.listcontainer div{
 		width:initial;
+	}
+	.listcontainer li {
+		text-align: center;
 	}
 	.allartcontainer{
 		display: initial;
