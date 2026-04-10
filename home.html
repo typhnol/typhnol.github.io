@@ -8,7 +8,8 @@
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 		<script src="mainfunctions.js" defer></script>
-		<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+		<script src="gettrack.js"></script>
+		<!-- <script src="https://chattable.neocities.org/scripts/main.min.js"></script> -->
 		<script>
 			// chattable.initialize({
 			//	stylesheet : "chattable.css",
@@ -53,6 +54,21 @@
 					<div id="statuscafe-content"></div>
 				</div>
 				<script src="https://status.cafe/current-status.js?name=typhnol" defer></script>
+				<div class="whatlisten">
+					<div class="songsec2">
+						<h2>what am i listening to?</h2>
+						<div id="lasttrack">
+							<img src="resources/albumcover.png" alt="album cover unavailable" id="albumcover" width=80px>
+							<a href="" id="songurl">
+								<div id="details">
+									<h3 id="songname">unavailable</h3>
+									<p id="artist">unavailable</p>
+									<p id="playing" style="color:grey;"></p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
 				<div class="updates-section">
 					<h2><img class="updatehead" src="resources/update.gif" alt="Updates"></h2>
 					<div class="updates">
