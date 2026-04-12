@@ -166,6 +166,11 @@ a:hover {
 	padding: 0px 5px;
 	text-align: right;
 }
+#doodlesphere {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
 .wholething{
 	text-align:center;
 	margin-top:20vh;
