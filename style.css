@@ -170,6 +170,10 @@ a:hover {
 	position: absolute;
 	top: 10px;
 	left: 10px;
+	img {
+		width: 200px;
+		height: 160px;
+	}
 }
 .wholething{
 	text-align:center;
