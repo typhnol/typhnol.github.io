@@ -167,12 +167,21 @@ a:hover {
 	text-align: right;
 }
 #doodlesphere {
+	display: block;
 	position: absolute;
+	width: 200px;
+	height: 160px;
 	top: 10px;
 	left: 10px;
 	img {
 		width: 200px;
 		height: 160px;
+	}
+	a {
+		position: absolute;
+		display: block;
+		width: inherit;
+		height: inherit;
 	}
 }
 .wholething{
