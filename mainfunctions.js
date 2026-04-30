@@ -13,7 +13,7 @@ textElements.forEach(element => {
   element.innerHTML = newHTML;
 });
 
-//COLLAPSIBLE BANNERS
+//COLLAPSIBLES
 
 var playBanner = document.getElementById("playbanner");
 var playBox = document.getElementById("playerframe");
@@ -44,6 +44,34 @@ function toggleDisplay(){
     localStorage.setItem("lastToggle", isOpened.toString());
 }
 playBanner.addEventListener("click", toggleDisplay); 
+
+const collapsetoggles = Array.from(document.querySelectorAll('.collapsetoggle'));
+const collapsibles = Array.from(document.querySelectorAll('.collapsible'));
+
+collapsibles.forEach((element, i) => {
+    element.id = "collapsible" + i;
+});
+
+collapsetoggles.forEach((element, i) => {
+    element.id = "toggler" + i;
+    element.addEventListener("click", () => {
+        collapseopen(i); 
+    });
+});
+
+function collapseopen(index){
+    var content = document.getElementById("collapsible"+index);
+    var toggler = document.getElementById("toggler" + index);
+    content.classList.toggle("collapsed");
+
+    if (content.classList.contains("collapsed")) {
+        toggler.innerHTML = "show";
+    } else {
+        toggler.innerHTML = "hide";
+    }
+}
+
+
 
 // var chatBanner = document.getElementById("chatbanner");
 // var chatBox = document.getElementById("chattable");

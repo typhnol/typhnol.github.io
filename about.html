@@ -32,11 +32,10 @@
 				<div class="aboutcontent">
 					<h2 class="animateText wavy">general</h2>
 					<p>i'm typhnol (he/him), typh shortened, an average internet lurker. generally i'll love any game that's fun and has a good story. i'll listen to anything that sounds good to my ears. you can find media/games/music im into, as well as some fun blinkies and buttons to sites I like or found interesting on this page.</p>
-					<div>
-						<h2 class="animateText wavy">what's this?</h2>
-						<p>just a personal website handcoded by yours truly. it's kinda shit but we ball. back in january 2024 i saw that one of my favorite artists at the time, <a href="https://mothcpu.net/">mothCPU</a>, had a neocities page, and i got curious. previously i used a carrd as a personal website to introduce myself, but seeing that you could code your own website to whatever you want was really an amazing thing, and i was very inspired by these many neocities websites by other people. i put quite some effort into this website and you can see the many iterations of layouts that this site went through lol (found in <a href="art.html">art</a> &gt; <a href="archive.html">old layouts</a>).</p>
-						<h2 class="animateText wavy">why?</h2>
-						<p>well, why not? i had some experience with HTML and CSS all the way back in 2020-2021 from a coding class at school, and then some Javascript in another coding class, and with a whole lot of help from <a href="https://www.w3schools.com/">W3Schools</a> and <a href="https://stackoverflow.com/questions">Stack Overflow</a>, i managed to make the amalgamation that is this site. also, it's fun. wouldn't you like a little personal corner of the internet that you can customize to your heart's content and where you can share all sorts of things or make funny little interactive widgets?</p>
+					<h2 class="animateText wavy">what's this?</h2>
+					<p class="collapsetoggle">show</p>
+					<div class="collapsible collapsed">
+						<p>just a personal website handcoded by yours truly. it's kinda shit but we ball. back in january 2024 i saw that one of my favorite artists at the time, <a href="https://mothcpu.net/">mothCPU</a>, had a neocities page, and i got curious. previously i used a carrd as a personal website to introduce myself, but the level of customization you could get from coding a website yourself was much more interesting to me. i also really liked exploring other people's websites on neocities, so a lot of the layouts i made for my website were inspired from those. i put quite some effort into this website and you can see the many iterations of layouts that this site went through lol (found in <a href="art.html">art</a> &gt; <a href="archive.html">old layouts</a>). i had some experience with HTML and CSS all the way back in 2020-2021 from a coding class at school, and then some Javascript in another coding class, and with a whole lot of help from <a href="https://www.w3schools.com/">W3Schools</a> and <a href="https://stackoverflow.com/questions">Stack Overflow</a>, i managed to make the amalgamation that is this site. coding is sometimes agonizing but having a personal website is fun. fun little thing you can show off to your friends and whoever happens to encounter it</p>
 					</div>
 				</div>
 				<div class="listcontainer">
@@ -47,7 +46,7 @@
 							<li><span>A Silent Voice</span></li>
 							<li><span>Fullmetal Alchemist (seen both)</span></li>
 							<li><span>Hunter x Hunter</span></li>
-							<li><span>Link Click</span></li>
+							
 							<li><span>Mob Psycho</span></li>
 							<li><span>Steins;Gate (including 0)</span></li>
 							<li><span>Violet Evergarden</span></li>
@@ -142,6 +141,7 @@
 						<ul>
 							<!-- <li><span></span></li> -->
 							<li><span>ALIEN STAGE</span></li>
+							<li><span>Link Click (时光代理人)</span></li>
 							<li><span>The Amazing Digital Circus</span></li>
 							<li><span>ENA</span></li>
 							<li><span>Underverse</span></li>
@@ -178,8 +178,9 @@
 					<h2>buttons</h2>
 					<!-- <a href="" target="_blank"><img src="resources/buttons/" class="button" alt=""></a> -->
 					<!-- <img src="resources/buttons/xxx.gif" alt="" class="button"> -->
+					<p>feel free to add my button</p>
 					<img src="https://file.garden/Zlk30agh4hF11eOU/typhnolbutton.gif" class="button" alt="my button">
-					<textarea id="copyBtn" style="width: 200px;" readonly form="copyBtn"><a href="https://typhnol.github.io/" target="_blank"><img src="https://file.garden/Zlk30agh4hF11eOU/typhnolbutton.gif" class="button" alt="typhnol's button"></a></textarea>
+					<textarea id="copyBtn" style="width: 200px;" readonly form="copyBtn" onfocus="this.select()"><a href="https://typhnol.github.io/" target="_blank"><img src="https://file.garden/Zlk30agh4hF11eOU/typhnolbutton.gif" class="button" alt="typhnol's button"></a></textarea>
 					<br><br>
 					<img src="resources/buttons/bestviewed.gif" alt="Best viewed with a computer" class="button">
 					<a href="https://corru.observer" target="_blank"><img src="resources/buttons/corru.gif" alt="Button to corru.observer, a webgame" class="button"></a>
@@ -282,7 +283,6 @@
 			spamton.addEventListener("click", spamtonLaugh);
 			survivor.addEventListener("click", survivorWaaaa);
 			ghost.addEventListener("click", ghostHit);
-			
 		</script>
 	</body>
 </html>
