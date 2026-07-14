@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 @font-face{
-	font-family:VCR_OSD;
-	src:url(https://file.garden/Zlk30agh4hF11eOU/VCR_OSD_MONO.woff2);
-}
-@font-face{
-	font-family:RWFont;
-	src:url(https://file.garden/Zlk30agh4hF11eOU/rain-world-menu.woff2);
+	font-family:DTF;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/DTM-Mono.otf);
 }
 body {
-	font-family:"Kode Mono", monospace;
+	font-family:DTF;
 }
 #top_banner {
 	display:none;
@@ -25,7 +20,7 @@ body {
 }
 .senderInfo {
 	color:#ff1a3c;
-	font-family:RWFont;
+	font-family:DTF;
 	font-size:15px;
 }
 #scrollToBottom {
@@ -112,14 +107,14 @@ body {
 	border-top:1px solid grey;
 	font-size: 12px;
 	color: white;
-	font-family:"Kode Mono", monospace;
+	font-family:DTF;
 }
 #input:empty::before{
 	color:grey;
-	font-family:"Kode Mono", monospace;
+	font-family:DTF;
 }
 #save, #name {
-	font-family:"Kode Mono", monospace;
+	font-family:DTF;
 }
 #name{
 	font-size: 12px;

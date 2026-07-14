@@ -73,35 +73,35 @@ function collapseopen(index){
 
 
 
-// var chatBanner = document.getElementById("chatbanner");
-// var chatBox = document.getElementById("chattable");
-// var indicator = document.getElementById("bannerlabel");
-// var isOpened = localStorage.getItem("lastToggle") === "true";
-// if (isOpened) {
-//     chatBox.style.bottom = "0px";
-//     chatBanner.style.bottom = "400px";
-//     indicator.innerHTML = "Close";
-// } else {
-//     chatBox.style.bottom = "-400px";
-//     chatBanner.style.bottom = "0px";
-//     indicator.innerHTML = "Open";
-// }
+var chatBanner = document.getElementById("chatbanner");
+var chatBox = document.getElementById("chattable");
+var indicator = document.getElementById("bannerlabel");
+var isOpened = localStorage.getItem("lastToggle") === "true";
+if (isOpened) {
+    chatBox.style.bottom = "0px";
+    chatBanner.style.bottom = "400px";
+    indicator.innerHTML = "Close";
+} else {
+    chatBox.style.bottom = "-400px";
+    chatBanner.style.bottom = "0px";
+    indicator.innerHTML = "Open";
+}
 
-// function toggleDisplay(){
-//     isOpened = !isOpened;
-//     if (isOpened) {
-//         chatBox.style.bottom = "0px";
-//         chatBanner.style.bottom = "400px";
-//         indicator.innerHTML = "Close";
-//     } else {
-//         chatBox.style.bottom = "-400px";
-//         chatBanner.style.bottom = "0px";
-//         indicator.innerHTML = "Open";
-//     }
+function toggleDisplay(){
+    isOpened = !isOpened;
+    if (isOpened) {
+        chatBox.style.bottom = "0";
+        chatBanner.style.bottom = "400px";
+        indicator.innerHTML = "Close";
+    } else {
+        chatBox.style.bottom = "-400px";
+        chatBanner.style.bottom = "0";
+        indicator.innerHTML = "Open";
+    }
         
-//     localStorage.setItem("lastToggle", isOpened.toString());
-// }
-// chatBanner.addEventListener("click", toggleDisplay); 
+    localStorage.setItem("lastToggle", isOpened.toString());
+}
+chatBanner.addEventListener("click", toggleDisplay); 
 
 //LINK SOUND EFFECTS
 
