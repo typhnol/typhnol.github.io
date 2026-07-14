@@ -128,3 +128,6 @@ a {
 input[type="checkbox"] + label::after{
 	color:#ff1a3c;
 }
+#loginBanner {
+	font-family:DTF;
+}
