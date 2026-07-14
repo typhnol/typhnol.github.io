@@ -76,6 +76,8 @@
 						<p class="dateEntry">//<br>ABC</p>
 						<br>
 						-->
+						<p class="dateEntry">7/14/26<br>added artfight section. added grace and rocky's ships from PHM! thanks aster for the idea</p>
+						<br>
 						<p class="dateEntry">4/11/26<br>something has appeared...</p>
 						<br>
 						<p class="dateEntry">3/27/26<br>modified gallery system, added doodles section. added viewer counter</p>
@@ -157,10 +159,18 @@
 				<!-- <a href="/fkdw.html" class="footer" id="forAster">iru dvwhu</a> -->
 			</footer>
 		</div>
+		<div id="phm">
+			<img src="resources/hailmary.png" alt="hailmary" id="hailmary">
+			<img src="resources/blipA.png" alt="blip-a" id="blipA">
+		</div>
+		<div id="phmC">
+			<img src="resources/hailmary.gif" alt="hailmary blip-a centrifuge" id="centrifuge">
+		</div>
 		<div id="doodlesphere">
 			<a href="https://typhnol.github.io/doodlesphere/" target="_blank"></a>
 			<img src="resources/errorsans.gif" alt="doodle sphere">
 		</div>
+		
 		<div>
 			<div id="playbanner" class="playbanner"><p id="playbannerlabel">&gt;</p></div>
 			<iframe id="playerframe" class="playerframe" src="player.html"></iframe>
@@ -169,5 +179,28 @@
 			<div id="chatbanner" class="chatbanner"><p id="bannerlabel">Chat</p></div>
 			<iframe src='https://beta.iframe.chat/embed?chat=79970941' id='chattable' class="chattable"></iframe>
 		</div> -->
+		<script>
+			function getRandomInt(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			phm = document.getElementById("phm");
+			phmC = document.getElementById("phmC");
+
+			function centrifugeChance() {
+				n = getRandomInt(1,100);
+				if (n<=10){
+					phmC.style.display = "block";
+					phm.style.display = "none";
+				} else {
+					phmC.style.display = "none";
+					phm.style.display = "block";
+				}
+			}
+			
+			centrifugeChance();
+		</script>
 	</body>
 </html>

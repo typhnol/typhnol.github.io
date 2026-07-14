@@ -74,6 +74,7 @@ body{
 	color:white;
 	background-color:black;
 	font-family: DTF;
+	overflow-x: hidden;
 }
 h1{
 	font-size: 35px;
@@ -182,6 +183,35 @@ a:hover {
 		display: block;
 		width: inherit;
 		height: inherit;
+	}
+}
+#hailmary {
+	display: block;
+	width: 30px;
+	position: absolute;
+	top: 0;
+	animation:move-right 12s linear infinite;
+}
+#blipA {
+	display: block;
+	width: 200px;
+	position: absolute;
+	top: 0;
+	animation:move-right 11s linear infinite;
+}
+#centrifuge {
+	display: block;
+	width: 180px;
+	position: absolute;
+	top: -50px;
+	animation: move-right 11s linear infinite;
+}
+@keyframes move-right {
+	0% { 
+		left: -250px;
+	}
+	100% { 
+		left: 2000px;
 	}
 }
 .wholething{
