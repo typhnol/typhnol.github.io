@@ -17,33 +17,33 @@ textElements.forEach(element => {
 
 var playBanner = document.getElementById("playbanner");
 var playBox = document.getElementById("playerframe");
-var indicator = document.getElementById("playbannerlabel");
-var isOpened = localStorage.getItem("lastToggle") === "true";
-if (isOpened) {
+var indicatorP = document.getElementById("playbannerlabel");
+var isOpenedP = localStorage.getItem("lastToggle") === "true";
+if (isOpenedP) {
     playBox.style.left = "0px";
     playBanner.style.left = "300px";
-    indicator.innerHTML = "&lt;";
+    indicatorP.innerHTML = "&lt;";
 } else {
     playBox.style.left = "-300px";
     playBanner.style.left = "0px";
-    indicator.innerHTML = "&gt;";
+    indicatorP.innerHTML = "&gt;";
 }
 
-function toggleDisplay(){
-    isOpened = !isOpened;
-    if (isOpened) {
+function togglePlayerDisplay(){
+    isOpenedP = !isOpenedP;
+    if (isOpenedP) {
         playBox.style.left = "0px";
         playBanner.style.left = "300px";
-        indicator.innerHTML = "&lt;";
+        indicatorP.innerHTML = "&lt;";
     } else {
         playBox.style.left = "-300px";
         playBanner.style.left = "0px";
-        indicator.innerHTML = "&gt;";
+        indicatorP.innerHTML = "&gt;";
     }
         
-    localStorage.setItem("lastToggle", isOpened.toString());
+    localStorage.setItem("lastToggle", isOpenedP.toString());
 }
-playBanner.addEventListener("click", toggleDisplay); 
+playBanner.addEventListener("click", togglePlayerDisplay); 
 
 const collapsetoggles = Array.from(document.querySelectorAll('.collapsetoggle'));
 const collapsibles = Array.from(document.querySelectorAll('.collapsible'));
@@ -87,7 +87,7 @@ if (isOpened) {
     indicator.innerHTML = "Open";
 }
 
-function toggleDisplay(){
+function toggleChatDisplay(){
     isOpened = !isOpened;
     if (isOpened) {
         chatBox.style.bottom = "0";
@@ -101,7 +101,7 @@ function toggleDisplay(){
         
     localStorage.setItem("lastToggle", isOpened.toString());
 }
-chatBanner.addEventListener("click", toggleDisplay); 
+chatBanner.addEventListener("click", toggleChatDisplay); 
 
 //LINK SOUND EFFECTS
 
