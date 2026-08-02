@@ -74,6 +74,10 @@ body{
 	color:white;
 	background-color:black;
 	font-family: DTF;
+	
+}
+#safaricangoshititself {
+	position: relative;
 	overflow-x: hidden;
 }
 h1{
