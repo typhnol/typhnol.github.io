@@ -1,3 +1,26 @@
+const topBtn = document.createElement("button");
+topBtn.id = "topBtn";
+topBtn.title = "Go to Top";
+topBtn.innerHTML = "top"
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+} 
+
+topBtn.addEventListener("click", topFunction);
+document.body.appendChild(topBtn);
+
 //TEXT SEPARATOR
 
 const textElements = document.querySelectorAll('.animateText');
@@ -125,28 +148,7 @@ document.addEventListener("click", (e) => {
 
 //GO TO TOP BUTTON
 
-const topBtn = document.createElement("button");
-topBtn.id = "topBtn";
-topBtn.title = "Go to Top";
-topBtn.innerHTML = "top"
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-}
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-} 
-
-topBtn.addEventListener("click", topFunction);
-document.body.appendChild(topBtn);
 
 //SPARKLES!!!
 

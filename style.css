@@ -69,13 +69,12 @@ body::before {
 html, body{
 	margin: 0;
 	padding: 0;
-	position: relative;
-	overflow-x: hidden;
 }
 body{
 	color:white;
 	background-color:black;
 	font-family: DTF;
+	overflow-x: hidden;
 }
 h1{
 	font-size: 35px;
@@ -190,7 +189,7 @@ a:hover {
 	display: block;
 	width: 30px;
 	position: absolute;
-	top: 0;
+	top: 5px;
 	animation:move-right 12s linear infinite;
 }
 #blipA {
@@ -204,7 +203,7 @@ a:hover {
 	display: block;
 	width: 180px;
 	position: absolute;
-	top: -50px;
+	top: -30px;
 	animation: move-right 11s linear infinite;
 }
 @keyframes move-right {
