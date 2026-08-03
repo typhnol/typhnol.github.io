@@ -90,7 +90,11 @@ body {
 	background-color:black;
 }
 #emojiTrayToggle{
-	background-image:url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emoji.png);
+	background-image: url(https://file.garden/Zlk30agh4hF11eOU/chatemotes/emojitray.png);
+	border: 1px solid white;
+	width: 20px;
+	height: 20px;
+	top: 3px;
 }
 .emojiInGrid{
 	height: 25pt;
