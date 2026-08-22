@@ -607,9 +607,12 @@ li span{
 	width:300px;
 }
 .artdate{
-	padding: 10px;
+	padding: 10px 0px;
 	color: #ff1a3c;
 	background-color: #121212;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 .artdate:hover{
 	cursor: pointer;
@@ -619,12 +622,6 @@ li span{
 .artimgmult a{
 	display: inline-block;
 }
-.artimgmult {
-	max-width: 400px;
-}
-.artimgmult .artimg{
-	width: 200px;
-}
 .artdeschidden {
 	display: none;
 }
@@ -632,6 +629,8 @@ li span{
 	box-sizing: border-box;
 	position: absolute;
 	font-size: 15px;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
@@ -746,6 +745,11 @@ li span{
 		padding: 0px 20px;
 	}
 }
+@media screen and (max-width: 609px){
+	.artdate, .artdesc {
+		width: 300px;
+	}
+}
 @media screen and (max-width: 800px){
 	.container{
 		flex-direction: column;
@@ -768,11 +772,6 @@ li span{
 	}
 	.artcontain {
 		display: inline-block;
-	}
-	.artimgpair .artimg, 
-	.artimgmult .artimg{
-		width: 45%;
-		max-width: 300px;
 	}
 	.artimgpair a {
 		display: initial;
