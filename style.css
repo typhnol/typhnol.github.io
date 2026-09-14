@@ -669,7 +669,7 @@ li span{
 	height: auto;
 }
 .blogpost p{
-	margin: initial;
+	margin-bottom: 1em;
 	text-align:left;
 }
 .blogpost ul{
