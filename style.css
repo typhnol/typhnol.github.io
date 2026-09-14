@@ -665,6 +665,7 @@ li span{
 	text-align: center;
 }
 .blogpost h2, .blogpost h3{
+	margin-top: 1em;
 	margin-bottom: 1em;
 }
 .blogpost img {
@@ -672,6 +673,7 @@ li span{
 	height: auto;
 }
 .blogpost p{
+	margin-top: 1em;
 	margin-bottom: 1em;
 	text-align:left;
 }
