@@ -94,8 +94,6 @@ function collapseopen(index){
     }
 }
 
-
-
 var chatBanner = document.getElementById("chatbanner");
 var chatBox = document.getElementById("chattable");
 var indicator = document.getElementById("bannerlabel");
@@ -103,11 +101,11 @@ var isOpened = localStorage.getItem("lastToggle") === "true";
 if (isOpened) {
     chatBox.style.bottom = "0px";
     chatBanner.style.bottom = "400px";
-    indicator.innerHTML = "Close";
+    indicator.innerHTML = "close chat";
 } else {
     chatBox.style.bottom = "-400px";
     chatBanner.style.bottom = "0px";
-    indicator.innerHTML = "Open";
+    indicator.innerHTML = "open chat";
 }
 
 function toggleChatDisplay(){
@@ -115,11 +113,11 @@ function toggleChatDisplay(){
     if (isOpened) {
         chatBox.style.bottom = "0";
         chatBanner.style.bottom = "400px";
-        indicator.innerHTML = "Close";
+        indicator.innerHTML = "close chat";
     } else {
         chatBox.style.bottom = "-400px";
         chatBanner.style.bottom = "0";
-        indicator.innerHTML = "Open";
+        indicator.innerHTML = "open chat";
     }
         
     localStorage.setItem("lastToggle", isOpened.toString());

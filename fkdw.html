@@ -7,6 +7,16 @@
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+		<script src="https://chattable.neocities.org/scripts/main.min.js"></script>
+		<script>
+			chattable.initialize({
+				stylesheet : "chattable.css",
+			});
+			
+			function delay (URL) {
+				setTimeout( function() { window.location = URL }, 200 );
+			}
+		</script>
 	</head>
 	<body>
 		<div class="wholething">
@@ -15,41 +25,74 @@
 					<a href="/home.html" class="navlink lower">back</a>
 				</nav>
 			</div>
-			<p class="markdownguide">
-				[color=#ff0000]text color[/color]
-				<br>
-				[color=#f00,#ff0]text color and background color[/color]
-				<br>
-				[b]bold text[/b]
-				<br>
-				[u]underlined text[/u]
-				<br>
-				[i]italicized text[/i]
-				<br>
-				[s]struck-out text[/s]
-				<br>
-				[q]"quoted text"[/q]
-				<br>
-				[sub]subscript[/sub]
-				<br>
-				[sup]superscript[/sup]
-				<br>
-				[center]centered text[/center]
-				<br>
-				[br](line break aka new line)
-				<br>
-				[big]larger font[/big]
-				<br>
-				[small]smaller font[/small]
-				<br>
-				[url=https://address.com/hyperlink]link text[/url]
-				<br>
-				[img=https://address.com/image.jpg]image caption[/img]
-				<br>or<br>
-				[img]https://address.com/image.jpg[/img] 
-			</p>
-            <iframe src="https://www5.cbox.ws/box/?boxid=961927&boxtag=Wb8cuc" width="80%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" id="cbox"></iframe>
-			<footer>
+			<div class="fkdwcontainer">
+				<div class="markdownguide">
+					<h2>markdown guide</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Syntax</th>
+								<th>Result</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>*Hello World*</code></td>
+								<td><i>Hello World</i></td>
+							</tr>
+							<tr>
+								<td><code>**Hello World**</code></td>
+								<td><b>Hello World</b></td>
+							</tr>
+							<tr>
+								<td><code>~~Hello World~~</code></td>
+								<td><s>Hello World</s></td>
+							</tr>
+							<tr>
+								<td><code>`Hello World`</code></td>
+								<td><code>Hello World</code></td>
+							</tr>
+							<tr>
+								<td><code>&gt;Hello World</code></td>
+								<td>
+									<blockquote>Hello World</blockquote>
+								</td>
+							</tr>
+							<tr>
+								<td><code>[Link](https://iframe.chat/help/)</code></td>
+								<td><a href="https://iframe.chat.help/">Link</a></td>
+							</tr>
+							<tr>
+								<td><code>![Alt Text](https://iframe.chat/c.png)</code></td>
+								<td>(Image)</td>
+							</tr>
+						</tbody>
+					</table>
+					<h2>chat commands</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Syntax</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>!online</code></td>
+								<td>Shows current online users.</td>
+							</tr>
+							<tr>
+								<td><code>!attach [src]</code></td>
+								<td>Attaches a file to a new message.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<iframe src='https://beta.iframe.chat/embed?chat=79970941' id='chattable' class="fkdw"></iframe>
+				</div>
+			</div>
+            <footer>
 
 			</footer>
         </div>

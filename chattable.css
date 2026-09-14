@@ -5,6 +5,9 @@
 body {
 	font-family:DTF;
 }
+:root {
+  --notification-sfx: https://file.garden/Zlk30agh4hF11eOU/undernet.mp3;
+}
 #top_banner {
 	display:none;
 }
@@ -14,6 +17,13 @@ body {
 }
 .allMessages {
 	border-top:1px solid #222222;
+}
+.allMessages::before {
+	content: attr(time);
+	float: right;
+	pointer-events: none;
+	font-size: 10px;
+	color: grey;
 }
 .msgBody {
 	color:white;
@@ -25,18 +35,27 @@ body {
 }
 #scrollToBottom {
 	border: 1px solid white;
-	background-color: black;
-	opacity: 0.5;
+	background: rgba(0, 0, 0, 1) !important;
 }
 .pinned{
 	position: sticky;
-	top: 0;
+	top: 0px;
 	z-index: 2;
 	background-color: black;
 	border: 1px solid #222222;
 }
 .pinned:hover {
 	opacity: 0.3;
+}
+.pinned .senderInfo::after {
+	margin-left: 5px;
+	content: "📌";
+}
+.pinned .allMessages::before {
+	display: none;
+}
+.pinned::after {
+	display: none;
 }
 #replyBanner{
 	background-color: black;
@@ -48,6 +67,9 @@ body {
 }
 #timestamp {
 	display: none;
+	color:grey;
+	font-size: 10px;
+	margin: 5px;
 }
 #settings {
 	background-image:none;
@@ -78,6 +100,14 @@ body {
 }
 #settingsMenu{
 	color: white;
+	height: fit-content;
+}
+#closeSettingsBtn{
+	font-family:DTF;
+}
+#confirmation{
+	height: fit-content;
+	margin-bottom: 10px;
 }
 #loginBanner {
 	transition: none;
@@ -103,7 +133,15 @@ body {
 	background-color:white;
 }
 #is_typing {
-	background-color:transparent;
+	background-color:black;
+}
+#onlineUserList {
+	background-color:black;
+	color: white;
+	font-family:DTF;
+}
+.dialogueModal #users{
+	border: 1px solid white;
 }
 #input {
 	border-radius:0;
