@@ -664,6 +664,9 @@ li span{
 .blogpost > h1 {
 	text-align: center;
 }
+.blogpost h2, .blogpost h3{
+	margin-bottom: 1em;
+}
 .blogpost img {
 	max-width: 100%;
 	height: auto;
@@ -687,6 +690,7 @@ li span{
 .markdownguide th, .markdownguide td {
 	border: 1px solid white;
 	padding: 5px;
+	font-size: 10px;
 }
 .markdownguide p, .markdownguide a{
 	font-size: 10px;
