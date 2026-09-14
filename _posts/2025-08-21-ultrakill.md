@@ -4,9 +4,6 @@ title: "ULTRAKILL my beloved"
 date: 2025-08-21 23:13:00
 author: typhnol
 ---
-
-## date uploaded: August 21, 2025
-
 hi guys if it wasn't obvious enough i super duper duper super like ultrakill
 <br>
 so uhmm lets talk about it

@@ -4,9 +4,6 @@ title: "OMG touhou"
 date: 2025-05-28 20:42:00
 author: typhnol
 ---
-
-## date uploaded: May 28, 2025
-
 idk how to start blog posts im just gonna start yapping
 
 so recently i've been kind of easing myself into the touhou project series

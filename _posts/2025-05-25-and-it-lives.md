@@ -4,9 +4,6 @@ title: "AND IT LIVES"
 date: 2025-05-25 22:19:40
 author: typhnol
 ---
-
-## date uploaded: May 25, 2025
-
 ok for real this time 
 <br>
 hello this is my first blog post woohoo yeahh yipee 
