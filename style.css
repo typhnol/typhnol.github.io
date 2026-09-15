@@ -318,6 +318,7 @@ a:hover {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
+	overflow-y: scroll;
 }
 .webrings div {
 	margin: 10px auto;
@@ -343,6 +344,9 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+#omoring {
+	max-width: 350px;
 }
 #bucket a {
 	font-size: 20px;
