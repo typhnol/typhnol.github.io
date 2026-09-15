@@ -94,35 +94,31 @@ function collapseopen(index){
     }
 }
 
-var chatBanner = document.getElementById("chatbanner");
-var chatBox = document.getElementById("chattable");
-var indicator = document.getElementById("bannerlabel");
-var isOpened = localStorage.getItem("lastToggle") === "true";
-if (isOpened) {
-    chatBox.style.bottom = "0px";
-    chatBanner.style.bottom = "400px";
-    indicator.innerHTML = "close chat";
+var wbBanner = document.getElementById("webringbanner");
+var wbBox = document.getElementById("webrings");
+var indicatorWB = document.getElementById("webringbannerlabel");
+var isOpenedWB = localStorage.getItem("lastToggle") === "true";
+if (isOpenedWB) {
+    wbBox.style.right = "0px";
+    wbBanner.style.right = "400px";
 } else {
-    chatBox.style.bottom = "-400px";
-    chatBanner.style.bottom = "0px";
-    indicator.innerHTML = "open chat";
+    wbBox.style.right = "-400px";
+    wbBanner.style.right = "0px";
 }
 
-function toggleChatDisplay(){
-    isOpened = !isOpened;
-    if (isOpened) {
-        chatBox.style.bottom = "0";
-        chatBanner.style.bottom = "400px";
-        indicator.innerHTML = "close chat";
+function toggleWebringDisplay(){
+    isOpenedWB = !isOpenedWB;
+    if (isOpenedWB) {
+        wbBox.style.right = "0px";
+        wbBanner.style.right = "400px";
     } else {
-        chatBox.style.bottom = "-400px";
-        chatBanner.style.bottom = "0";
-        indicator.innerHTML = "open chat";
+        wbBox.style.right = "-400px";
+        wbBanner.style.right = "0px";
     }
         
-    localStorage.setItem("lastToggle", isOpened.toString());
+    localStorage.setItem("lastToggle", isOpenedWB.toString());
 }
-chatBanner.addEventListener("click", toggleChatDisplay); 
+wbBanner.addEventListener("click", toggleWebringDisplay); 
 
 //LINK SOUND EFFECTS
 

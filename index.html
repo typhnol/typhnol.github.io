@@ -7,6 +7,7 @@
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+		<script src="mainfunctions.js" defer></script>
 		<style>
 			body::before {
 				display: none;
@@ -23,8 +24,25 @@
 				<section>
 					<a href="home.html" class="lower">Enter?</a>
 					<p class="splashnote">for frequent visitors: do <span>CTRL+SHIFT+R</span> or <span>CTRL+F5</span> often :)</p>
-					<p class="splashnote"><span>warning: </span>music autoplay, possible motion sickness, a good amount of things require javascript to work here</p>
+					<p class="splashnote"><span>warning: </span>music autoplay, possible motion sickness, things require javascript to work here</p>
 				</section>
+			</div>
+		</div>
+		<div id="webringbanner" class="webringbanner"><p id="webringbannerlabel">webrings</p></div>
+		<div id="webrings" class="webrings">
+			<h2>webrings</h2>
+			<div id='gfdkris'>
+				<script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-variables.js"></script>
+				<script type="text/javascript" src="https://fabstarotcorner.neocities.org/webring/onionring-widget.js"></script>
+			</div>
+			<div id="bucket">
+				<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=typhnol">&lt;</a>
+				<a href="https://webring.bucketfish.me" class="animateText rainbow">bucket webring</a>
+				<a href="https://webring.bucketfish.me/redirect.html?to=random&name=typhnol">?!</a>
+				<a href="https://webring.bucketfish.me/redirect.html?to=next&name=typhnol">&gt;</a>
+			</div>
+			<div id="transing">
+				<script src="https://transring.neocities.org/ring.js" data-widget="cloud"></script>
 			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -32,6 +50,33 @@
 			particlesJS.load('particles-js', 'particles.json', function() {
 				console.log('particles.js loaded');
 			});
+		</script>
+		<script>
+			var wbBanner = document.getElementById("webringbanner");
+			var wbBox = document.getElementById("webrings");
+			var indicatorWB = document.getElementById("webringbannerlabel");
+			var isOpenedWB = localStorage.getItem("lastToggle") === "true";
+			if (isOpenedWB) {
+				wbBox.style.right = "0px";
+				wbBanner.style.right = "400px";
+			} else {
+				wbBox.style.right = "-400px";
+				wbBanner.style.right = "0px";
+			}
+
+			function toggleWebringDisplay(){
+				isOpenedWB = !isOpenedWB;
+				if (isOpenedWB) {
+					wbBox.style.right = "0px";
+					wbBanner.style.right = "400px";
+				} else {
+					wbBox.style.right = "-400px";
+					wbBanner.style.right = "0px";
+				}
+					
+				localStorage.setItem("lastToggle", isOpenedWB.toString());
+			}
+			wbBanner.addEventListener("click", toggleWebringDisplay); 
 		</script>
 	</body>
 </html>
