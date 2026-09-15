@@ -308,8 +308,8 @@ a:hover {
 .webrings {
 	box-sizing: border-box;
 	position: fixed;
-	padding: 20px;
-	width: 400px;
+	padding: 10px;
+	width: 350px;
 	bottom: 0;
 	right: 0;
 	background-color: black;
@@ -321,8 +321,9 @@ a:hover {
 	overflow-y: scroll;
 }
 .webrings div {
-	margin: 10px auto;
+	margin: 5px auto;
 	text-align: center;
+	max-width: 320px;
 }
 .webringbanner {
 	position: fixed;
@@ -330,7 +331,7 @@ a:hover {
 	min-height: 150px;
 	height: fit-content;
 	bottom: calc(50vh - 75px);
-	right: 400px;
+	right: 350px;
 	background-color: #ff1a3c;
 	display: flex;
 	justify-content: center;
@@ -338,9 +339,11 @@ a:hover {
 	cursor: pointer;
 }
 #webringbannerlabel {
-	writing-mode: sideways-lr;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
 }
 #webringbannerlabel span {
+	writing-mode: vertical-rl;
 	text-orientation: mixed;
 }
 #gfdkris{
@@ -350,7 +353,7 @@ a:hover {
 	margin: 10px auto 0px auto;
 }
 #omoring {
-	max-width: 350px;
+	max-width: 330px;
 }
 #bucket a {
 	font-size: 20px;
