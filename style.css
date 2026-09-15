@@ -344,6 +344,7 @@ a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 10px auto 0px auto;
 }
 #omoring {
 	max-width: 350px;
