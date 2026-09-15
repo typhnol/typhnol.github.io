@@ -18,7 +18,7 @@ i mean i wasn't a snail at making art by any means, but it was definitely hinder
 
 regardless, i survived so suck it highschool
 
-![graduation](https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/graduation.png)
+<img src="https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/graduation.png" width="200px" height="200px" alt="graduation">
 
 ## artfight
 
@@ -30,7 +30,7 @@ i joined despite that, and it proved to be a worthwhile choice. i mean, i've NEV
 
 it also gave me the chance to experiment and improve my art, so that's always good.
 
-![locked in](https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/artist.png)
+<img src="https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/artist.png" width="200px" height="200px" alt="locked in">
 
 ## beepbox project???
 
@@ -40,7 +40,7 @@ i started the project last year as a sort of homage to undertale since it was un
 
 however, i do still really want to at least finish this project. maybe if i lock in i can finish the year with a bang.
 
-![broken record](https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/record.png)
+<img src="https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/record.png" width="200px" height="200px" alt="broken record">
 
 ## the fate of this blog
 
@@ -58,4 +58,4 @@ anyways, basically this blog is going to be perpetually under life support and i
 
 thanks for reading
 
-![goodbye](https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/byebye.png)
+<img src="https://file.garden/Zlk30agh4hF11eOU/blogimages/9-15-26/byebye.png" width="200px" height="200px" alt="goodbye">
