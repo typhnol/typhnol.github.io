@@ -340,6 +340,9 @@ a:hover {
 #webringbannerlabel {
 	writing-mode: sideways-lr;
 }
+#webringbannerlabel span {
+	text-orientation: mixed;
+}
 #gfdkris{
 	display: flex;
 	justify-content: center;
