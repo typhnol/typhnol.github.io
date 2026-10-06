@@ -115,6 +115,9 @@ body {
 .highlight{
 	background-color:#ff1a3c;
 }
+.replyLink {
+	color: white;
+}
 #emojiTray {
 	color:white;
 	background-color:black;
