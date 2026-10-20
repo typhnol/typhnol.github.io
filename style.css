@@ -573,6 +573,12 @@ li span{
 	margin-left: auto;
 	margin-right: auto;
 }
+.fanlistings {
+	max-width: 800px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
 .plushies > *{
 	font-size: 15px;
 }
